@@ -38,17 +38,17 @@
           <a href="terms.html" class="hover:text-purple-600">Terms</a>
         </nav>
 
-       <!-- Mobile Hamburger Button -->
+<!-- Mobile Hamburger Button (visible only on mobile) -->
 <div class="md:hidden">
-  <button id="mobile-menu-button" class="focus:outline-none text-white">
-    <i id="menu-icon" class="fas fa-bars text-3xl"></i>
+  <button id="mobile-menu-button" class="focus:outline-none">
+    <i id="menu-icon" class="fas fa-bars text-2xl text-black"></i>
   </button>
 </div>
 
-<!-- Mobile Navigation Menu -->
+<!-- Mobile Navigation Menu (hidden by default) -->
 <nav
   id="mobile-menu"
-  class="hidden fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 z-50"
+  class="hidden fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 z-50 md:hidden"
 >
   <a href="index.html" class="text-white text-2xl">Home</a>
   <a href="films.html" class="text-white text-2xl">Films</a>
@@ -69,7 +69,7 @@ const icon = document.getElementById("menu-icon");
 btn.addEventListener("click", () => {
   menu.classList.toggle("hidden");
 
-  // Toggle icon between hamburger and cross (using fa-times)
+  // Toggle icon between hamburger and cross
   if (menu.classList.contains("hidden")) {
     icon.classList.remove("fa-times");
     icon.classList.add("fa-bars");
@@ -87,6 +87,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
     icon.classList.add("fa-bars");
   });
 });
+
 </script>
 
 
@@ -106,10 +107,15 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
       <div class="relative wedding z-10 text-center px-6 max-w-3xl">
         <!-- Heading -->
         <h2
-          class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold tracking-tight drop-shadow-[0_3px_5px_rgba(0,0,0,0.7)] mb-10"
+          class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold tracking-tight drop-shadow-[0_3px_5px_rgba(0,0,0,0.7)] "
         >
           The Celebration Tales
         </h2>
+        <p
+  class="text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)] mb-4"
+>
+  Capturing Moments, Creating Memories.
+</p>
 
         <!-- Top PNG line -->
         <img
@@ -143,7 +149,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
           >
             The Celebration Tales
           </span>
-          world!
+         
         </p>
 
         <!-- Bottom PNG line -->
@@ -158,7 +164,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
     <!-- Purple Divider -->
     <section
-      class="w-full h-[15rem] bg-[#f8f4ed] flex flex-col items-center justify-center text-center px-4"
+      class="w-full h-[15rem] purple1 bg-[#f8f4ed] flex flex-col items-center justify-center text-center px-4"
     >
       <p
         class="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 font-sans tracking-wide"
@@ -193,7 +199,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
     <!-- Purple Divider -->
     <section
-      class="w-full h-[24rem] bg-[#f8f4ed] flex flex-col items-center justify-center text-center text-white"
+      class="w-full h-[24rem] bg-[#f8f4ed] purple2 flex flex-col items-center justify-center text-center text-white"
     >
       <div class="w-[70vw] mx-auto">
         <img
@@ -204,8 +210,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
         />
 
         <p
-          class="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4 font-sans tracking-wide"
-          style="word-spacing: 0.25rem"
+         class="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 font-sans tracking-wide"
         >
           At <span class="font-semibold">The Celebration Tales</span>, we are
           storytellers at heart and photographers by profession. We capture the
@@ -216,8 +221,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
         </p>
 
         <p
-          class="text-black text-base sm:text-lg md:text-xl font-sans font-medium leading-relaxed tracking-wide"
-          style="word-spacing: 0.25rem"
+          class="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 font-sans tracking-wide"
         >
           Our passion lies in transforming moments into
           <span class="font-semibold italic">timeless memories</span>. With
@@ -236,7 +240,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
     <!-- Third Background Section -->
     <section
-      class="h-screen bg-center bg-cover relative flex items-center justify-center"
+      class="h-screen bg-center purple3 bg-cover relative flex items-center justify-center"
       style="background-image: url('images/home3.jpg'); height: 50vh"
     >
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
@@ -260,8 +264,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
         />
 
         <p
-          class="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4 font-sans tracking-wide"
-          style="word-spacing: 0.25rem"
+          class="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 font-sans tracking-wide"
         >
           We believe that every
           <span class="font-semibold">celebration</span> is more than just an
@@ -272,8 +275,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
         </p>
 
         <p
-          class="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4 font-sans tracking-wide"
-          style="word-spacing: 0.25rem"
+         class="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 font-sans tracking-wide"
         >
           At <span class="font-semibold">The Celebration Tales</span>, we bring
           these moments to life with passion and creativity, turning every
@@ -293,7 +295,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
 
     <!-- Fourth Background Section -->
     <section
-      class="h-screen bg-center bg-cover relative flex items-center justify-center"
+      class="h-screen bg-center purple4 bg-cover relative flex items-center justify-center"
       style="background-image: url('images/home4.jpg'); height: 80vh"
     >
       <div class="absolute inset-0 bg-black bg-opacity-30"></div>

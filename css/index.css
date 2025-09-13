@@ -136,8 +136,11 @@ body {
   background-repeat: no-repeat;
 }
 
+.purple4 .purple1 .purple2 .purple3 .overlay {
+  background-color: rgba(0,0,0,0.5); /* 10% opacity */
+}
     .wedding {
-        margin-top: -26rem;
+        margin-top: -33rem;
 
     }
 
