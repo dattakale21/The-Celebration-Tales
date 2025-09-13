@@ -8,77 +8,165 @@ body {
 }
 
 @media screen and (max-width: 640px) {
-  /* Home2 section */
-  section.bg-home2 {
-    height: 35vh !important; /* Decrease height on phone */
-  }
 
-  /* Optional: adjust text size if needed */
-  section.bg-home2 h2 {
-    font-size: 1.5rem; /* smaller heading for phones */
-  }
-   .home1-hero {
-    height: 60vh; /* smaller height for mobile */
-    background-position: top center; /* crop from bottom */
-  }
+    /* Home2 section */
+    section.bg-home2 {
+        height: 35vh !important;
+        /* Decrease height on phone */
+    }
+
+    /* Optional: adjust text size if needed */
+    section.bg-home2 h2 {
+        font-size: 1.5rem;
+        /* smaller heading for phones */
+    }
+
+    .home1-hero {
+        height: 60vh;
+        /* smaller height for mobile */
+        background-position: top center;
+        /* crop from bottom */
+    }
 }
 
 /* Desktop default */
 .bg-home3 {
-  height: 50vh; /* default for large screens */
-  background-position: center center;
-  background-size: cover;
+    height: 50vh;
+    /* default for large screens */
+    background-position: center center;
+    background-size: cover;
 }
 
 /* Tablets */
 @media screen and (max-width: 1024px) {
-  .bg-home3 {
-    height: 45vh; /* slightly smaller for tablets */
-  }
+    .bg-home3 {
+        height: 45vh;
+        /* slightly smaller for tablets */
+    }
 }
 
 /* Mobile devices */
 @media screen and (max-width: 640px) {
-  .bg-home3 {
-    height: 35vh; /* smaller for phones */
-    background-position: center bottom; /* crop from bottom */
-  }
+    .bg-home3 {
+        height: 35vh;
+        /* smaller for phones */
+        background-position: center bottom;
+        /* crop from bottom */
+    }
 
-  .bg-home3 h2 {
-    font-size: 1.5rem; /* smaller text */
-  }
+    .bg-home3 h2 {
+        font-size: 1.5rem;
+        /* smaller text */
+    }
 }
 
 .bg-home3 {
-  background-image: url('../images/home3.jpg'); /* path to your image */
-  background-position: center center; /* center the image */
-  background-size: cover; /* make it cover the whole section */
-  height: 50vh; /* default height for desktop */
-  position: relative;
+    background-image: url('../images/home3.jpg');
+    /* path to your image */
+    background-position: center center;
+    /* center the image */
+    background-size: cover;
+    /* make it cover the whole section */
+    height: 50vh;
+    /* default height for desktop */
+    position: relative;
 }
 
 .bg-home4 {
-  background-image: url('../images/home4.jpg');
-  background-position: center center;
-  background-size: cover;
-  height: 80vh; /* default height */
-  position: relative;
+    background-image: url('../images/home4.jpg');
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    /* default height */
+    position: relative;
 }
 
 /* Tablets */
 @media screen and (max-width: 1024px) {
-  .bg-home4 {
-    height: 70vh;
-  }
+    .bg-home4 {
+        height: 70vh;
+    }
 }
 
 /* Mobile */
 @media screen and (max-width: 640px) {
-  .bg-home4 {
-    height: 50vh; /* crops from bottom for mobile */
-  }
+    .bg-home4 {
+        height: 50vh;
+        /* crops from bottom for mobile */
+    }
 }
 
-@media (max-width: 360px){
-  .bg-home1 img, .bg-home2 img, .bg-home3 img { width: 80%; }
+@media (max-width: 360px) {
+
+    .bg-home1 img,
+    .bg-home2 img,
+    .bg-home3 img {
+        width: 80%;
+    }
+}
+
+#menu-icon {
+    font-size: 3rem;
+    color: var(--text-color, #000);
+    cursor: pointer;
+    z-index: 20;
+}
+
+#mobile-menu {
+    display: none;
+}
+
+#mobile-menu.show {
+    display: flex;
+}
+
+#close-menu {
+    font-size: 3rem;
+}
+
+/* Target 6.67-inch 1080x2400 screens (CSS pixels 432x960) */
+@media screen and (max-width: 432px) and (max-height: 960px) {
+    /* Example adjustments: */
+
+    /* Reduce hero section height */
+  .bg-home1 {
+  height: 100vh; /* full screen */
+  background-size: cover;
+  background-position: top center; /* crop bottom */
+  background-repeat: no-repeat;
+}
+
+    .wedding {
+        margin-top: -26rem;
+
+    }
+
+    .bg-home2 {
+        height: 35vh;
+    }
+
+    .bg-home3 {
+        height: 35vh;
+    }
+
+    .bg-home4 {
+        height: 50vh;
+    }
+
+    /* Adjust heading text sizes */
+    h2 {
+        font-size: 1.5rem;
+        /* smaller for mobile */
+    }
+
+    /* Adjust paragraph text size */
+    p {
+        font-size: 0.9rem;
+    }
+
+    /* Adjust navbar items */
+    nav a {
+        font-size: 1.4rem;
+        padding: 0 1rem;
+    }
 }

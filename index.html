@@ -38,28 +38,27 @@
           <a href="terms.html" class="hover:text-purple-600">Terms</a>
         </nav>
 
-        <!-- Mobile Hamburger Button -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button">
-            <i class="fas fa-bars text-2xl"></i>
-          </button>
-        </div>
-      </div>
+    <!-- Mobile Hamburger Button -->
+<div class="md:hidden relative">
+  <i id="menu-icon" class="fas fa-bars text-3xl cursor-pointer z-20"></i>
+</div>
 
-      <!-- Mobile Navigation Menu -->
-      <nav
-        id="mobile-menu"
-        class="hidden md:hidden flex flex-col bg-[#f8f4ed] px-6 py-4 space-y-4 font-semibold text-lg"
-      >
-        <a href="index.html" class="hover:text-purple-600">Home</a>
-        <a href="films.html" class="hover:text-purple-600">Films</a>
-        <a href="images.html" class="hover:text-purple-600">Images</a>
-        <a href="about.html" class="hover:text-purple-600">About Us</a>
-        <a href="services.html" class="hover:text-purple-600">Services</a>
-        <a href="contact.html" class="hover:text-purple-600">Contact</a>
-        <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
-        <a href="terms.html" class="hover:text-purple-600">Terms</a>
-      </nav>
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 z-10">
+  <!-- Close Button -->
+  <i id="close-menu" class="fas fa-times text-white text-4xl absolute top-6 right-6 cursor-pointer"></i>
+
+  <!-- Mobile Links -->
+  <a href="index.html" class="text-white text-2xl" onclick="closeMenu()">Home</a>
+  <a href="films.html" class="text-white text-2xl" onclick="closeMenu()">Films</a>
+  <a href="images.html" class="text-white text-2xl" onclick="closeMenu()">Images</a>
+  <a href="about.html" class="text-white text-2xl" onclick="closeMenu()">About Us</a>
+  <a href="services.html" class="text-white text-2xl" onclick="closeMenu()">Services</a>
+  <a href="contact.html" class="text-white text-2xl" onclick="closeMenu()">Contact</a>
+  <a href="privacy.html" class="text-white text-2xl" onclick="closeMenu()">Privacy</a>
+  <a href="terms.html" class="text-white text-2xl" onclick="closeMenu()">Terms</a>
+</div>
+
     </header>
     <script>
       const btn = document.getElementById("mobile-menu-button");
@@ -72,7 +71,7 @@
 
     <!-- First Background Section -->
     <section
-      class="h-screen bg-center bg-cover relative flex flex-col items-center justify-center"
+      class="h-screen  bg-center bg-cover relative flex flex-col items-center justify-center"
       style="
         background-image: url('images/home1.jpg');
         background-position: center -290px;
@@ -83,7 +82,7 @@
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
       <!-- Content -->
-      <div class="relative z-10 text-center px-6 max-w-3xl">
+      <div class="relative wedding z-10 text-center px-6 max-w-3xl">
         <!-- Heading -->
         <h2
           class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold tracking-tight drop-shadow-[0_3px_5px_rgba(0,0,0,0.7)] mt-10"
@@ -380,6 +379,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./js/parallex.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>
