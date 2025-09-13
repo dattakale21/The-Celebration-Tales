@@ -130,11 +130,11 @@ body {
 
     /* Reduce hero section height */
   .bg-home1 {
-  height: 100vh; /* full screen */
   background-size: cover;
-  background-position: top center; /* crop bottom */
+  background-position: top center; /* or center center */
   background-repeat: no-repeat;
 }
+
 
 .purple4 .purple1 .purple2 .purple3 .overlay {
   background-color: rgba(0,0,0,0.5); /* 10% opacity */

@@ -22,7 +22,7 @@
       <img
         src="images/logo2.png"
         alt="Logo"
-        class="h-[4.5rem] w-auto saturate-200 cursor-pointer mt-1.6 -ml-2"
+        class="h-[4.5rem] w-auto saturate-200 cursor-pointer mt-1.8 -ml-2"
       />
     </a>
 
@@ -38,68 +38,45 @@
           <a href="terms.html" class="hover:text-purple-600">Terms</a>
         </nav>
 
-<!-- Mobile Hamburger Button (visible only on mobile) -->
-<div class="md:hidden">
-  <button id="mobile-menu-button" class="focus:outline-none">
-    <i id="menu-icon" class="fas fa-bars text-xl text-brown"></i>
-  </button>
-</div>
+<!-- Mobile Hamburger Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button">
+            <i class="fas fa-bars text-xl text-brown"></i>
+          </button>
+        </div>
+      </div>
 
-<!-- Mobile Navigation Menu (hidden by default) -->
-<nav
-  id="mobile-menu"
-  class="hidden flex flex-col items-center space-y-6 w-full bg-black bg-opacity-90 md:hidden transition-all duration-300 overflow-hidden"
->
-  <a href="index.html" class="text-white text-2xl">Home</a>
-  <a href="films.html" class="text-white text-2xl">Films</a>
-  <a href="images.html" class="text-white text-2xl">Images</a>
-  <a href="about.html" class="text-white text-2xl">About Us</a>
-  <a href="services.html" class="text-white text-2xl">Services</a>
-  <a href="contact.html" class="text-white text-2xl">Contact</a>
-  <a href="privacy.html" class="text-white text-2xl">Privacy</a>
-  <a href="terms.html" class="text-white text-2xl">Terms</a>
-</nav>
-
+      <!-- Mobile Navigation Menu -->
+      <nav
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col bg-[#f8f4ed] px-6 py-4 space-y-4 font-semibold text-lg"
+      >
+        <a href="index.html" class="hover:text-purple-600">Home</a>
+        <a href="films.html" class="hover:text-purple-600">Films</a>
+        <a href="images.html" class="hover:text-purple-600">Images</a>
+        <a href="about.html" class="hover:text-purple-600">About Us</a>
+        <a href="services.html" class="hover:text-purple-600">Services</a>
+        <a href="contact.html" class="hover:text-purple-600">Contact</a>
+        <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
+        <a href="terms.html" class="hover:text-purple-600">Terms</a>
+      </nav>
     </header>
-   <script>
-const btn = document.getElementById("mobile-menu-button");
-const menu = document.getElementById("mobile-menu");
-const icon = document.getElementById("menu-icon");
+    <script>
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
 
-btn.addEventListener("click", () => {
-  menu.classList.toggle("hidden");
-
-  // Toggle icon between hamburger and cross
-  if (menu.classList.contains("hidden")) {
-    icon.classList.remove("fa-times");
-    icon.classList.add("fa-bars");
-  } else {
-    icon.classList.remove("fa-bars");
-    icon.classList.add("fa-times");
-  }
-});
-
-// Close menu when clicking a link
-document.querySelectorAll("#mobile-menu a").forEach(link => {
-  link.addEventListener("click", () => {
-    menu.classList.add("hidden");
-    icon.classList.remove("fa-times");
-    icon.classList.add("fa-bars");
-  });
-});
-
-</script>
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
 
 
     <!-- First Background Section -->
-    <section
-      class="h-screen bg-center bg-home1 bg-cover relative flex flex-col items-center justify-center"
-      style="
-        background-image: url('images/home1.jpg');
-        background-position: center -290px;
-        height: 200vh;
-      "
-    >
+   <section
+  class="h-screen bg-center bg-cover bg-home1 relative flex flex-col items-center justify-center"
+  style="background-image: url('images/home1.jpg');"
+>
+
       <!-- Overlay -->
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
 
@@ -107,7 +84,7 @@ document.querySelectorAll("#mobile-menu a").forEach(link => {
       <div class="relative wedding z-10 text-center px-6 max-w-3xl">
         <!-- Heading -->
         <h2
-          class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold tracking-tight drop-shadow-[0_3px_5px_rgba(0,0,0,0.7)] "
+          class="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-extrabold tracking-tight drop-shadow-[0_3px_5px_rgba(0,0,0,0.7)] "
         >
           The Celebration Tales
         </h2>
