@@ -41,14 +41,14 @@
 <!-- Mobile Hamburger Button (visible only on mobile) -->
 <div class="md:hidden">
   <button id="mobile-menu-button" class="focus:outline-none">
-    <i id="menu-icon" class="fas fa-bars text-2xl text-black"></i>
+    <i id="menu-icon" class="fas fa-bars text-xl text-brown"></i>
   </button>
 </div>
 
 <!-- Mobile Navigation Menu (hidden by default) -->
 <nav
   id="mobile-menu"
-  class="hidden fixed inset-0 bg-black bg-opacity-90 flex flex-col items-center justify-center space-y-6 z-50 md:hidden"
+  class="hidden flex flex-col items-center space-y-6 w-full bg-black bg-opacity-90 md:hidden transition-all duration-300 overflow-hidden"
 >
   <a href="index.html" class="text-white text-2xl">Home</a>
   <a href="films.html" class="text-white text-2xl">Films</a>
