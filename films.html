@@ -15,18 +15,15 @@
     <header class="w-full bg-[#f8f4ed] shadow-md">
       <div class="mx-auto flex items-center justify-between h-[70px] px-2">
         <!-- Logo -->
-        <div class="flex items-center h-[5rem]">
-          <a href="index.html">
-            <img
-              src="images/logo2.png"
-              alt="Logo"
-              class="h-[5rem] w-auto saturate-200 cursor-pointer"
-            />
-          </a>
-        </div>
-
+        <a href="index.html" class="block">
+      <img
+        src="images/logo2.png"
+        alt="Logo"
+        class="h-[4.5rem] w-auto saturate-200 cursor-pointer mt-1.6 -ml-2"
+      />
+    </a>
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-6 font-semibold">
+        <nav class="hidden md:flex space-x-6 font-semibold mr-10">
           <a href="index.html" class="hover:text-purple-600">Home</a>
           <a href="films.html" class="hover:text-purple-600">Films</a>
           <a href="images.html" class="hover:text-purple-600">Images</a>
@@ -48,7 +45,7 @@
       <!-- Mobile Navigation Menu -->
       <nav
         id="mobile-menu"
-        class="hidden md:hidden flex flex-col bg-[#f8f4ed] px-4 py-2 space-y-2 font-semibold"
+        class="hidden md:hidden flex flex-col bg-[#f8f4ed] px-6 py-4 space-y-4 font-semibold text-lg"
       >
         <a href="index.html" class="hover:text-purple-600">Home</a>
         <a href="films.html" class="hover:text-purple-600">Films</a>
@@ -71,7 +68,7 @@
 
     <!-- Hero Section -->
     <section
-      class="relative h-[70vh] bg-cover bg-center flex items-center justify-center text-center"
+      class="relative min-h-[60vh] md:min-h-[70vh] bg-cover bg-center flex items-center justify-center text-center"
       style="background-image: url('images/films1bg.jpg')"
     >
       <div class="absolute inset-0 bg-black/50"></div>
@@ -95,7 +92,7 @@
     </section>
 
     <!-- Featured Films Section -->
-   
+
     <section class="py-16 -mt-10 bg-[#f8f4ed]">
       <div class="max-w-6xl mx-auto px-6 text-center">
         <h3
@@ -109,9 +106,10 @@
           class="mx-auto mb-12 h-5 w-[29rem]"
         />
 
-      
         <!-- Video Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        >
           <!-- Reel 1 -->
           <div
             class="relative bg-white group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
@@ -128,8 +126,10 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Ganpati Visarjan</h4>
-              <p class="text-gray-600 text-sm">
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Ganpati Visarjan
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
                 Festival vibes captured beautifully
               </p>
             </div>
@@ -150,8 +150,10 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Handmade Art</h4>
-              <p class="text-gray-600 text-sm">
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Handmade Art
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
                 Created on cloth using threads
               </p>
             </div>
@@ -172,8 +174,10 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Handmade Decoration</h4>
-              <p class="text-gray-600 text-sm">
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Handmade Decoration
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
                 Intricate cloth artwork threads
               </p>
             </div>
@@ -194,8 +198,12 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Bright Vibes</h4>
-              <p class="text-gray-600 text-sm">Colors, fun, happy moments.</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Bright Vibes
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Colors, fun, happy moments.
+              </p>
             </div>
           </div>
 
@@ -214,8 +222,12 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Simple Joys</h4>
-              <p class="text-gray-600 text-sm">Smiles, fun, happy life</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Simple Joys
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Smiles, fun, happy life
+              </p>
             </div>
           </div>
 
@@ -234,8 +246,12 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Dreamscape</h4>
-              <p class="text-gray-600 text-sm">Calm, soft, peaceful scene</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Dreamscape
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Calm, soft, peaceful scene
+              </p>
             </div>
           </div>
 
@@ -254,8 +270,10 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Cozy Days</h4>
-              <p class="text-gray-600 text-sm">Warmth, calm, relaxing vibes</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">Cozy Days</h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Warmth, calm, relaxing vibes
+              </p>
             </div>
           </div>
 
@@ -274,8 +292,10 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Happy Faces</h4>
-              <p class="text-gray-600 text-sm">
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Happy Faces
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
                 Laughs, smiles, cheerful people.
               </p>
             </div>
@@ -296,8 +316,12 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Golden Hour</h4>
-              <p class="text-gray-600 text-sm">Sunlight, glow, warm feeling</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Golden Hour
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Sunlight, glow, warm feeling
+              </p>
             </div>
           </div>
 
@@ -316,8 +340,12 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Nature Walk</h4>
-              <p class="text-gray-600 text-sm">Green, fresh, outdoor beauty</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Nature Walk
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Green, fresh, outdoor beauty
+              </p>
             </div>
           </div>
 
@@ -336,8 +364,12 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Chill Beat</h4>
-              <p class="text-gray-600 text-sm">Music, relax, good mood</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Chill Beat
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Music, relax, good mood
+              </p>
             </div>
           </div>
 
@@ -356,8 +388,12 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Light Play</h4>
-              <p class="text-gray-600 text-sm">Sun, shadows, moving colors</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Light Play
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Sun, shadows, moving colors
+              </p>
             </div>
           </div>
 
@@ -375,8 +411,8 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Baby Joy</h4>
-              <p class="text-gray-600 text-sm">
+              <h4 class="text-base sm:text-lg font-semibold mb-1">Baby Joy</h4>
+              <p class="text-xs sm:text-sm text-gray-600">
                 Smiles, giggles, tiny hands, love, fun
               </p>
             </div>
@@ -397,8 +433,10 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Lohagad Trek Reel</h4>
-              <p class="text-gray-600 text-sm">
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Lohagad Trek Reel
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
                 Hills, nature, climb, views, fun.
               </p>
             </div>
@@ -419,8 +457,12 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Sunset Glow</h4>
-              <p class="text-gray-600 text-sm">Evening, warmth, soft light.</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Sunset Glow
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Evening, warmth, soft light.
+              </p>
             </div>
           </div>
 
@@ -439,8 +481,12 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Music Mood</h4>
-              <p class="text-gray-600 text-sm">Beat, rhythm, soft energy</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Music Mood
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Beat, rhythm, soft energy
+              </p>
             </div>
           </div>
 
@@ -458,8 +504,12 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Sweet Moments</h4>
-              <p class="text-gray-600 text-sm">Joy and laughter all around.</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Sweet Moments
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Joy and laughter all around.
+              </p>
             </div>
           </div>
 
@@ -477,8 +527,12 @@
               </video>
             </div>
             <div class="p-4 text-center">
-              <h4 class="text-lg font-semibold mb-1">Ganpati Moments</h4>
-              <p class="text-gray-600 text-sm">Joy and laughter all around.</p>
+              <h4 class="text-base sm:text-lg font-semibold mb-1">
+                Ganpati Moments
+              </h4>
+              <p class="text-xs sm:text-sm text-gray-600">
+                Joy and laughter all around.
+              </p>
             </div>
           </div>
         </div>
@@ -498,7 +552,7 @@
       </button>
       <video
         id="modal-video"
-        class="max-h-[90vh] max-w-[90vw] rounded-lg"
+        class="w-[95vw] sm:w-auto max-h-[80vh] rounded-lg"
         controls
         autoplay
       ></video>
@@ -557,11 +611,10 @@
 
     <!-- CTA Section -->
     <section
-      class="relative py-16 text-center text-white bg-cover bg-center flex items-center justify-center"
+      class="relative py-20 md:py-28 text-center text-white bg-cover bg-center flex items-center justify-center"
       style="
         background-image: url('images/films2bg.jpg');
         background-position: center -290px;
-        height: 70vh;
       "
     >
       <div class="absolute inset-0 bg-black/50"></div>
@@ -584,7 +637,7 @@
     <!-- Footer -->
     <footer class="bg-[#f8f4ed] text-black py-6">
       <div class="container mx-auto flex flex-col items-center space-y-4 px-4">
-        <div class="flex space-x-6">
+       <div class="flex space-x-8 text-2xl sm:text-3xl">
           <a
             href="https://instagram.com"
             target="_blank"

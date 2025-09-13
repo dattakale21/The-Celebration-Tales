@@ -7,5 +7,78 @@ body {
     overflow-x: hidden;
 }
 
+@media screen and (max-width: 640px) {
+  /* Home2 section */
+  section.bg-home2 {
+    height: 35vh !important; /* Decrease height on phone */
+  }
 
+  /* Optional: adjust text size if needed */
+  section.bg-home2 h2 {
+    font-size: 1.5rem; /* smaller heading for phones */
+  }
+   .home1-hero {
+    height: 60vh; /* smaller height for mobile */
+    background-position: top center; /* crop from bottom */
+  }
+}
 
+/* Desktop default */
+.bg-home3 {
+  height: 50vh; /* default for large screens */
+  background-position: center center;
+  background-size: cover;
+}
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  .bg-home3 {
+    height: 45vh; /* slightly smaller for tablets */
+  }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 640px) {
+  .bg-home3 {
+    height: 35vh; /* smaller for phones */
+    background-position: center bottom; /* crop from bottom */
+  }
+
+  .bg-home3 h2 {
+    font-size: 1.5rem; /* smaller text */
+  }
+}
+
+.bg-home3 {
+  background-image: url('../images/home3.jpg'); /* path to your image */
+  background-position: center center; /* center the image */
+  background-size: cover; /* make it cover the whole section */
+  height: 50vh; /* default height for desktop */
+  position: relative;
+}
+
+.bg-home4 {
+  background-image: url('../images/home4.jpg');
+  background-position: center center;
+  background-size: cover;
+  height: 80vh; /* default height */
+  position: relative;
+}
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+  .bg-home4 {
+    height: 70vh;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  .bg-home4 {
+    height: 50vh; /* crops from bottom for mobile */
+  }
+}
+
+@media (max-width: 360px){
+  .bg-home1 img, .bg-home2 img, .bg-home3 img { width: 80%; }
+}

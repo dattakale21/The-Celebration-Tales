@@ -18,18 +18,16 @@
     <header class="w-full bg-[#f8f4ed] shadow-md">
       <div class="mx-auto flex items-center justify-between h-[70px] px-2">
         <!-- Logo -->
-        <div class="flex items-center h-[5rem]">
-          <a href="index.html">
-            <img
-              src="images/logo2.png"
-              alt="Logo"
-              class="h-[5rem] w-auto saturate-200 cursor-pointer"
-            />
-          </a>
-        </div>
+        <a href="index.html" class="block">
+      <img
+        src="images/logo2.png"
+        alt="Logo"
+        class="h-[4.5rem] w-auto saturate-200 cursor-pointer mt-1.6 -ml-2"
+      />
+    </a>
 
         <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-6 font-semibold">
+        <nav class="hidden md:flex space-x-6 font-semibold mr-10">
           <a href="index.html" class="hover:text-purple-600">Home</a>
           <a href="films.html" class="hover:text-purple-600">Films</a>
           <a href="images.html" class="hover:text-purple-600">Images</a>
@@ -51,7 +49,7 @@
       <!-- Mobile Navigation Menu -->
       <nav
         id="mobile-menu"
-        class="hidden md:hidden flex flex-col bg-[#f8f4ed] px-4 py-2 space-y-2 font-semibold"
+        class="hidden md:hidden flex flex-col bg-[#f8f4ed] px-6 py-4 space-y-4 font-semibold text-lg"
       >
         <a href="index.html" class="hover:text-purple-600">Home</a>
         <a href="films.html" class="hover:text-purple-600">Films</a>
@@ -88,16 +86,20 @@
       <div class="relative z-10 text-center px-6 max-w-3xl">
         <!-- Heading -->
         <h2
-          class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold tracking-tight drop-shadow-[0_3px_5px_rgba(0,0,0,0.7)] mb-10"
+          class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold tracking-tight drop-shadow-[0_3px_5px_rgba(0,0,0,0.7)] mt-10"
         >
           The Celebration Tales
         </h2>
+
+        <p class="text-white text-sm sm:text-base md:text-lg lg:text-xl font-semibold drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)] mb-4">
+  Capturing Moments, Creating Memories.
+</p>
 
         <!-- Top PNG line -->
         <img
           src="images/dash_line.png"
           alt="line"
-          class="mx-auto mb-9 mt-20 w-4rem h-5 filter invert"
+          class="mx-auto mb-9 mt-10 w-4rem h-5 filter invert"
           style="width: 20rem"
         />
 
@@ -186,9 +188,8 @@
         />
 
         <p
-          class="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4 font-sans tracking-wide"
-          style="word-spacing: 0.25rem"
-        >
+        class="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 font-sans tracking-wide"
+      >
           At <span class="font-semibold">The Celebration Tales</span>, we are
           storytellers at heart and photographers by profession. We capture the
           <span class="italic">emotions, joy, and beauty</span> that make your
@@ -274,18 +275,16 @@
     </section>
 
     <!-- Fourth Background Section -->
-    <section
-      class="h-screen bg-center bg-cover relative flex items-center justify-center"
-      style="background-image: url('images/home4.jpg'); height: 80vh"
-    >
-      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
-      <h2
-        class="relative z-10 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
-        style="word-spacing: 0.8rem"
-      >
-        OUR PROMISE
-      </h2>
-    </section>
+  <section class="bg-home4 flex items-center justify-center relative">
+  <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+  <h2
+    class="relative z-10 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
+    style="word-spacing: 0.8rem"
+  >
+    OUR PROMISE
+  </h2>
+</section>
+
 
     <section
       class="w-full h-[24rem] bg-[#f8f4ed] flex items-center justify-center text-center"
@@ -329,7 +328,7 @@
     <footer class="bg-[#f8f4ed] text-black py-6">
       <div class="container mx-auto flex flex-col items-center space-y-4 px-4">
         <!-- Row 1: Social Icons -->
-        <div class="flex space-x-6">
+        <div class="flex space-x-8 text-2xl sm:text-3xl">
           <a
             href="https://instagram.com"
             target="_blank"
