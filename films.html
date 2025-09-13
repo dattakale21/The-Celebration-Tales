@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Celebration Tales - Films</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="flex flex-col min-h-screen text-gray-900 bg-gray-50">
+    <!-- Header -->
+    <header class="w-full bg-[#f8f4ed] shadow-md">
+      <div class="mx-auto flex items-center justify-between h-[70px] px-2">
+        <!-- Logo -->
+        <div class="flex items-center h-[5rem]">
+          <a href="index.html">
+            <img
+              src="images/logo2.png"
+              alt="Logo"
+              class="h-[5rem] w-auto saturate-200 cursor-pointer"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6 font-semibold">
+          <a href="index.html" class="hover:text-purple-600">Home</a>
+          <a href="films.html" class="hover:text-purple-600">Films</a>
+          <a href="images.html" class="hover:text-purple-600">Images</a>
+          <a href="about.html" class="hover:text-purple-600">About Us</a>
+          <a href="services.html" class="hover:text-purple-600">Services</a>
+          <a href="contact.html" class="hover:text-purple-600">Contact</a>
+          <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
+          <a href="terms.html" class="hover:text-purple-600">Terms</a>
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <nav
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col bg-[#f8f4ed] px-4 py-2 space-y-2 font-semibold"
+      >
+        <a href="index.html" class="hover:text-purple-600">Home</a>
+        <a href="films.html" class="hover:text-purple-600">Films</a>
+        <a href="images.html" class="hover:text-purple-600">Images</a>
+        <a href="about.html" class="hover:text-purple-600">About Us</a>
+        <a href="services.html" class="hover:text-purple-600">Services</a>
+        <a href="contact.html" class="hover:text-purple-600">Contact</a>
+        <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
+        <a href="terms.html" class="hover:text-purple-600">Terms</a>
+      </nav>
+    </header>
+    <script>
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Hero Section -->
+    <section
+      class="relative h-[70vh] bg-cover bg-center flex items-center justify-center text-center"
+      style="background-image: url('images/films1bg.jpg')"
+    >
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 px-6 max-w-3xl">
+        <h2
+          class="text-2xl md:text-3xl lg:text-4xl font-serif text-white font-extrabold mb-4 tracking-tight"
+        >
+          OUR
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500"
+            >FILMS</span
+          >
+        </h2>
+
+        <p class="text-lg md:text-xl text-gray-200 leading-relaxed">
+          Whether it’s a wedding, a birthday, or a festival, we capture every
+          celebration with passion and creativity—turning moments into stories
+          you can cherish forever.
+        </p>
+      </div>
+    </section>
+
+    <!-- Featured Films Section -->
+   
+    <section class="py-16 -mt-10 bg-[#f8f4ed]">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h3
+          class="text-3xl md:text-4xl font-extrabold mb-4 text-gray-800 tracking-wide"
+        >
+          FEATURED FILMS
+        </h3>
+        <img
+          src="images/dash_line.png"
+          alt="line"
+          class="mx-auto mb-12 h-5 w-[29rem]"
+        />
+
+      
+        <!-- Video Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <!-- Reel 1 -->
+          <div
+            class="relative bg-white group rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/18.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Ganpati Visarjan</h4>
+              <p class="text-gray-600 text-sm">
+                Festival vibes captured beautifully
+              </p>
+            </div>
+          </div>
+
+          <!-- Reel 2 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Handmade Art</h4>
+              <p class="text-gray-600 text-sm">
+                Created on cloth using threads
+              </p>
+            </div>
+          </div>
+
+          <!-- Reel 3 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/2.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Handmade Decoration</h4>
+              <p class="text-gray-600 text-sm">
+                Intricate cloth artwork threads
+              </p>
+            </div>
+          </div>
+
+          <!-- Reel 4 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/3.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Bright Vibes</h4>
+              <p class="text-gray-600 text-sm">Colors, fun, happy moments.</p>
+            </div>
+          </div>
+
+          <!-- Reel 5 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/4.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Simple Joys</h4>
+              <p class="text-gray-600 text-sm">Smiles, fun, happy life</p>
+            </div>
+          </div>
+
+          <!-- Reel 6 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/5.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Dreamscape</h4>
+              <p class="text-gray-600 text-sm">Calm, soft, peaceful scene</p>
+            </div>
+          </div>
+
+          <!-- Reel 7 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/6.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Cozy Days</h4>
+              <p class="text-gray-600 text-sm">Warmth, calm, relaxing vibes</p>
+            </div>
+          </div>
+
+          <!-- Reel 8 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/7.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Happy Faces</h4>
+              <p class="text-gray-600 text-sm">
+                Laughs, smiles, cheerful people.
+              </p>
+            </div>
+          </div>
+
+          <!-- Reel 9 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/8.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Golden Hour</h4>
+              <p class="text-gray-600 text-sm">Sunlight, glow, warm feeling</p>
+            </div>
+          </div>
+
+          <!-- Reel 10 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/9.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Nature Walk</h4>
+              <p class="text-gray-600 text-sm">Green, fresh, outdoor beauty</p>
+            </div>
+          </div>
+
+          <!-- Reel 11 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/10.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Chill Beat</h4>
+              <p class="text-gray-600 text-sm">Music, relax, good mood</p>
+            </div>
+          </div>
+
+          <!-- Reel 13 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/11.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Light Play</h4>
+              <p class="text-gray-600 text-sm">Sun, shadows, moving colors</p>
+            </div>
+          </div>
+
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/google.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Baby Joy</h4>
+              <p class="text-gray-600 text-sm">
+                Smiles, giggles, tiny hands, love, fun
+              </p>
+            </div>
+          </div>
+
+          <!-- Reel 14 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/13.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Lohagad Trek Reel</h4>
+              <p class="text-gray-600 text-sm">
+                Hills, nature, climb, views, fun.
+              </p>
+            </div>
+          </div>
+
+          <!-- Reel 15 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/14.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Sunset Glow</h4>
+              <p class="text-gray-600 text-sm">Evening, warmth, soft light.</p>
+            </div>
+          </div>
+
+          <!-- Reel 16 -->
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/15.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Music Mood</h4>
+              <p class="text-gray-600 text-sm">Beat, rhythm, soft energy</p>
+            </div>
+          </div>
+
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/16.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Sweet Moments</h4>
+              <p class="text-gray-600 text-sm">Joy and laughter all around.</p>
+            </div>
+          </div>
+
+          <div
+            class="relative group bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition"
+          >
+            <div class="w-full" style="aspect-ratio: 9 / 16">
+              <video
+                class="w-full h-full object-cover rounded-2xl"
+                muted
+                loop
+                preload="metadata"
+              >
+                <source src="assets/18.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="p-4 text-center">
+              <h4 class="text-lg font-semibold mb-1">Ganpati Moments</h4>
+              <p class="text-gray-600 text-sm">Joy and laughter all around.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Overlay -->
+    <div
+      id="video-modal"
+      class="fixed inset-0 bg-black bg-opacity-90 hidden items-center justify-center z-50"
+    >
+      <button
+        id="close-modal"
+        class="absolute top-4 right-4 text-white text-3xl font-bold"
+      >
+        &times;
+      </button>
+      <video
+        id="modal-video"
+        class="max-h-[90vh] max-w-[90vw] rounded-lg"
+        controls
+        autoplay
+      ></video>
+    </div>
+
+    <!-- Hover Play Script -->
+    <script>
+      const modal = document.getElementById("video-modal");
+      const modalVideo = document.getElementById("modal-video");
+      const closeModal = document.getElementById("close-modal");
+
+      // Hover play/pause for grid preview videos
+      document.querySelectorAll("section video").forEach((video) => {
+        video.addEventListener("mouseenter", () => {
+          video.muted = false; // ✅ with sound
+          video.currentTime = 0;
+          video.play();
+        });
+        video.addEventListener("mouseleave", () => {
+          video.pause();
+        });
+
+        // Click → open modal with full video
+        video.addEventListener("click", () => {
+          modal.classList.remove("hidden");
+          modal.classList.add("flex");
+
+          // Load video source
+          modalVideo.src = video.querySelector("source").src;
+          modalVideo.currentTime = 0;
+
+          modalVideo.muted = false;
+          modalVideo.loop = true; // ✅ loop enabled
+          modalVideo.play();
+        });
+      });
+
+      // Close modal when clicking X
+      closeModal.addEventListener("click", () => {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+        modalVideo.pause();
+        modalVideo.src = "";
+      });
+
+      // Close when clicking outside the video
+      modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.classList.add("hidden");
+          modal.classList.remove("flex");
+          modalVideo.pause();
+          modalVideo.src = "";
+        }
+      });
+    </script>
+
+    <!-- CTA Section -->
+    <section
+      class="relative py-16 text-center text-white bg-cover bg-center flex items-center justify-center"
+      style="
+        background-image: url('images/films2bg.jpg');
+        background-position: center -290px;
+        height: 70vh;
+      "
+    >
+      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="relative z-10 max-w-3xl px-6">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">
+          Want Your Story to Be Told?
+        </h2>
+        <p class="mb-10">
+          Reach out to us and let’s create a film you’ll cherish forever.
+        </p>
+        <a
+          href="contact.html"
+          class="relative inline-block px-5 py-3 rounded-full font-semibold text-white text-lg bg-gradient-to-r from-cyan-500 to-blue-500 shadow-[0_4px_20px_rgba(6,182,212,0.9)] hover:shadow-[0_6px_25px_rgba(6,182,212,1)] hover:from-blue-500 hover:to-cyan-500 transition-all duration-300"
+        >
+          <span class="relative">Contact Us</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#f8f4ed] text-black py-6">
+      <div class="container mx-auto flex flex-col items-center space-y-4 px-4">
+        <div class="flex space-x-6">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="text-black hover:text-pink-500 transition"
+          >
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="text-black hover:text-blue-500 transition"
+          >
+            <i class="fab fa-facebook text-2xl"></i>
+          </a>
+          <a
+            href="https://wa.me/91XXXXXXXXXX"
+            target="_blank"
+            class="text-black hover:text-green-500 transition"
+          >
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
+        </div>
+        <p class="text-sm text-center text-black tracking-widest">
+          The Celebration Tales © 2025
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

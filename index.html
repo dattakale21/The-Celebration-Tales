@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Celebration Tales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- external CSS -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="text-gray-800 font-sans">
+    <!-- Header -->
+    <header class="w-full bg-[#f8f4ed] shadow-md">
+      <div class="mx-auto flex items-center justify-between h-[70px] px-2">
+        <!-- Logo -->
+        <div class="flex items-center h-[5rem]">
+          <a href="index.html">
+            <img
+              src="images/logo2.png"
+              alt="Logo"
+              class="h-[5rem] w-auto saturate-200 cursor-pointer"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6 font-semibold">
+          <a href="index.html" class="hover:text-purple-600">Home</a>
+          <a href="films.html" class="hover:text-purple-600">Films</a>
+          <a href="images.html" class="hover:text-purple-600">Images</a>
+          <a href="about.html" class="hover:text-purple-600">About Us</a>
+          <a href="services.html" class="hover:text-purple-600">Services</a>
+          <a href="contact.html" class="hover:text-purple-600">Contact</a>
+          <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
+          <a href="terms.html" class="hover:text-purple-600">Terms</a>
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <nav
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col bg-[#f8f4ed] px-4 py-2 space-y-2 font-semibold"
+      >
+        <a href="index.html" class="hover:text-purple-600">Home</a>
+        <a href="films.html" class="hover:text-purple-600">Films</a>
+        <a href="images.html" class="hover:text-purple-600">Images</a>
+        <a href="about.html" class="hover:text-purple-600">About Us</a>
+        <a href="services.html" class="hover:text-purple-600">Services</a>
+        <a href="contact.html" class="hover:text-purple-600">Contact</a>
+        <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
+        <a href="terms.html" class="hover:text-purple-600">Terms</a>
+      </nav>
+    </header>
+    <script>
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- First Background Section -->
+    <section
+      class="h-screen bg-center bg-cover relative flex flex-col items-center justify-center"
+      style="
+        background-image: url('images/home1.jpg');
+        background-position: center -290px;
+        height: 200vh;
+      "
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-center px-6 max-w-3xl">
+        <!-- Heading -->
+        <h2
+          class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-extrabold tracking-tight drop-shadow-[0_3px_5px_rgba(0,0,0,0.7)] mb-10"
+        >
+          The Celebration Tales
+        </h2>
+
+        <!-- Top PNG line -->
+        <img
+          src="images/dash_line.png"
+          alt="line"
+          class="mx-auto mb-9 mt-20 w-4rem h-5 filter invert"
+          style="width: 20rem"
+        />
+
+        <!-- Paragraph -->
+        <p
+          class="text-white text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-6 mt-13 font-sans tracking-wide drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]"
+        >
+          Imagine stepping into a
+          <span class="italic">space where every moment sparkles</span> and
+          every memory matters.<br /><br />
+
+          A world filled with <span class="font-semibold">laughter</span>,
+          <span class="font-semibold">tears of joy</span>, and stories that
+          unfold in the most <span>beautiful ways</span> — from weddings and
+          pre-weddings to birthdays, baby showers, anniversaries, festivals, and
+          celebrations at work or college.<br /><br />
+
+          Each frame, each clip, each creative banner captures not just the
+          <span class="font-semibold">event</span>, but the
+          <span class="italic">emotions, love, and magic</span> behind it.<br /><br />
+
+          This is our world.
+          <span
+            class="font-bold italic text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500"
+          >
+            The Celebration Tales
+          </span>
+          world!
+        </p>
+
+        <!-- Bottom PNG line -->
+        <img
+          src="images/dash_line.png"
+          alt="line"
+          class="mx-auto mb-6 w-4rem h-5 mt-9 filter invert"
+          style="width: 20rem"
+        />
+      </div>
+    </section>
+
+    <!-- Purple Divider -->
+    <section
+      class="w-full h-[15rem] bg-[#f8f4ed] flex flex-col items-center justify-center text-center px-4"
+    >
+      <p
+        class="text-black text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed mb-4 font-sans tracking-wide"
+      >
+        “Without <span class="font-semibold italic">celebrations</span>, our
+        lives would pass by in a flash.<br />
+        These moments have the power to pause time, letting us relive
+        <span class="font-semibold">laughter, joy</span>, and
+        <span class="italic">emotions</span> that last forever.”
+      </p>
+
+      <p
+        class="text-black font-serif font-semibold text-sm sm:text-base md:text-lg lg:text-xl tracking-wide mt-2"
+      >
+        — SANGMESH MEHTRE
+      </p>
+    </section>
+
+    <!-- Second Background Section -->
+    <section
+      class="h-screen bg-center bg-cover relative flex items-center justify-center"
+      style="background-image: url('images/home2.jpg'); height: 50vh"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <h2
+        class="relative z-10 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
+        style="word-spacing: 0.8rem"
+      >
+        CELEBRATIONS WE CHERISH
+      </h2>
+    </section>
+
+    <!-- Purple Divider -->
+    <section
+      class="w-full h-[24rem] bg-[#f8f4ed] flex flex-col items-center justify-center text-center text-white"
+    >
+      <div class="w-[70vw] mx-auto">
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-3 w-4rem h-7 filter"
+          style="width: 30rem"
+        />
+
+        <p
+          class="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4 font-sans tracking-wide"
+          style="word-spacing: 0.25rem"
+        >
+          At <span class="font-semibold">The Celebration Tales</span>, we are
+          storytellers at heart and photographers by profession. We capture the
+          <span class="italic">emotions, joy, and beauty</span> that make your
+          celebrations truly unforgettable. From weddings and engagements to
+          birthdays and baby showers, our lens is always focused on preserving
+          the essence of your special day.
+        </p>
+
+        <p
+          class="text-black text-base sm:text-lg md:text-xl font-sans font-medium leading-relaxed tracking-wide"
+          style="word-spacing: 0.25rem"
+        >
+          Our passion lies in transforming moments into
+          <span class="font-semibold italic">timeless memories</span>. With
+          creativity, care, and a love for storytelling, we frame every detail
+          so that you can relive your celebration for years to come.
+        </p>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-1 mt-4 w-10rem h-7 filter"
+          style="width: 30rem"
+        />
+      </div>
+    </section>
+
+    <!-- Third Background Section -->
+    <section
+      class="h-screen bg-center bg-cover relative flex items-center justify-center"
+      style="background-image: url('images/home3.jpg'); height: 50vh"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <h2
+        class="relative z-10 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
+        style="word-spacing: 0.8rem"
+      >
+        WHAT WE BELIEVE ?
+      </h2>
+    </section>
+
+    <section
+      class="w-full h-[24rem] bg-[#f8f4ed] flex flex-col items-center justify-center text-center text-white"
+    >
+      <div class="w-[70vw] mx-auto">
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-3 w-4rem h-7 filter"
+          style="width: 30rem"
+        />
+
+        <p
+          class="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4 font-sans tracking-wide"
+          style="word-spacing: 0.25rem"
+        >
+          We believe that every
+          <span class="font-semibold">celebration</span> is more than just an
+          event — it is a story of
+          <span class="italic">love, joy, and togetherness</span> that deserves
+          to be remembered forever. Each moment holds emotions that words cannot
+          fully capture.
+        </p>
+
+        <p
+          class="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4 font-sans tracking-wide"
+          style="word-spacing: 0.25rem"
+        >
+          At <span class="font-semibold">The Celebration Tales</span>, we bring
+          these moments to life with passion and creativity, turning every
+          <span class="italic">laugh, tear, and smile</span> into
+          <span class="font-semibold">timeless memories</span> — a cinematic
+          experience that preserves the magic of your special day.
+        </p>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-1 mt-4 w-10rem h-7 filter"
+          style="width: 30rem"
+        />
+      </div>
+    </section>
+
+    <!-- Fourth Background Section -->
+    <section
+      class="h-screen bg-center bg-cover relative flex items-center justify-center"
+      style="background-image: url('images/home4.jpg'); height: 80vh"
+    >
+      <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+      <h2
+        class="relative z-10 text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-extrabold drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
+        style="word-spacing: 0.8rem"
+      >
+        OUR PROMISE
+      </h2>
+    </section>
+
+    <section
+      class="w-full h-[24rem] bg-[#f8f4ed] flex items-center justify-center text-center"
+    >
+      <div class="w-[70vw]">
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-3"
+          style="width: 30rem; height: 1.75rem"
+        />
+
+        <p
+          class="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4 font-sans tracking-wide"
+          style="word-spacing: 0.25rem"
+        >
+          We promise to capture every
+          <span class="italic">glance, laugh, and tear</span> with authenticity,
+          never staged — only
+          <span class="font-semibold">real moments</span> that define your love
+          story.
+        </p>
+
+        <p
+          class="text-black text-base sm:text-lg md:text-xl leading-relaxed mb-4 font-sans tracking-wide"
+        >
+          Our films and photos are crafted to be
+          <span class="font-semibold">timeless</span>, so you can relive the
+          magic of your wedding day for years to come.
+        </p>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mt-6"
+          style="width: 30rem; height: 1.75rem"
+        />
+      </div>
+    </section>
+
+    <footer class="bg-[#f8f4ed] text-black py-6">
+      <div class="container mx-auto flex flex-col items-center space-y-4 px-4">
+        <!-- Row 1: Social Icons -->
+        <div class="flex space-x-6">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="text-black hover:text-pink-500 transition"
+          >
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="text-black hover:text-blue-500 transition"
+          >
+            <i class="fab fa-facebook text-2xl"></i>
+          </a>
+          <a
+            href="https://wa.me/91XXXXXXXXXX"
+            target="_blank"
+            class="text-black hover:text-green-500 transition"
+          >
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
+        </div>
+
+        <!-- Row 2: Copyright -->
+        <p
+          class="text-sm text-center text-black tracking-widest"
+          style="word-spacing: 4px"
+        >
+          The Celebration Tales © 2025
+        </p>
+      </div>
+    </footer>
+
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/your-key.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/your-key.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- FontAwesome CDN -->
+    <script
+      src="https://kit.fontawesome.com/your-key.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/parallex.js"></script>
+  </body>
+</html>

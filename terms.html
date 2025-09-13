@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Celebration Tales - Terms & Conditions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body class="text-gray-800 font-sans">
+    <!-- Header -->
+    <header
+      class="w-full bg-[#f8f4ed] shadow-[0_6px_15px_rgba(0,0,0,0.6)] border-b border-gray-300"
+    >
+      <div class="mx-auto flex items-center justify-between h-[70px] px-2">
+        <!-- Logo -->
+        <div class="flex items-center h-[5rem]">
+          <a href="index.html">
+            <img
+              src="images/logo2.png"
+              alt="Logo"
+              class="h-[5rem] w-auto saturate-200 cursor-pointer"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6 font-semibold">
+          <a href="index.html" class="hover:text-purple-600">Home</a>
+          <a href="films.html" class="hover:text-purple-600">Films</a>
+          <a href="images.html" class="hover:text-purple-600">Images</a>
+          <a href="about.html" class="hover:text-purple-600">About Us</a>
+          <a href="services.html" class="hover:text-purple-600">Services</a>
+          <a href="contact.html" class="hover:text-purple-600">Contact</a>
+          <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
+          <a href="terms.html" class="hover:text-purple-600">Terms</a>
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <nav
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col bg-[#f8f4ed] px-4 py-2 space-y-2 font-semibold"
+      >
+        <a href="index.html" class="hover:text-purple-600">Home</a>
+        <a href="films.html" class="hover:text-purple-600">Films</a>
+        <a href="images.html" class="hover:text-purple-600">Images</a>
+        <a href="about.html" class="hover:text-purple-600">About Us</a>
+        <a href="services.html" class="hover:text-purple-600">Services</a>
+        <a href="contact.html" class="hover:text-purple-600">Contact</a>
+        <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
+        <a href="terms.html" class="hover:text-purple-600">Terms</a>
+      </nav>
+    </header>
+    <script>
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Terms Section -->
+    <section id="terms" class="bg-[#f8f4ed] py-16 text-black">
+      <!-- Heading -->
+      <h2
+        class="text-2xl md:text-3xl text-center lg:text-4xl font-serif font-extrabold mb-4 -mt-10 tracking-tight"
+      >
+        TERMS &
+        <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500"
+          >CONDITIONS</span
+        >
+      </h2>
+      <!-- Line -->
+      <img
+        src="images/dash_line.png"
+        alt="line"
+        class="mx-auto mb-6 mt-10 h-5"
+        style="width: 29rem"
+      />
+
+      <!-- Content -->
+      <div
+        class="max-w-4xl mx-auto text-left px-4 space-y-10 leading-relaxed text-lg"
+      >
+        <!-- Effective Date -->
+        <p class="text-center text-gray-600">Effective Date: October 2, 2025</p>
+
+        <!-- Intro -->
+        <p class="text-center italic">
+          Welcome to
+          <a
+            href="index.html"
+            class="font-bold text-cyan-600 hover:text-cyan-400 transition"
+          >
+            The Celebration Tales </a
+          >. By accessing or using our website and services, you agree to comply
+          with and be bound by the following Terms & Conditions. Please read
+          them carefully. If you do not agree, please do not use our website or
+          services.
+        </p>
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-6 mt-10 h-5"
+          style="width: 50rem"
+        />
+
+        <!-- Sections -->
+        <div>
+          <h3 class="text-2xl font-bold text-cyan-600 mb-3">1. Services</h3>
+          <p class="text-gray-700">
+            We provide photography, videography, and related creative services
+            for weddings, birthdays, baby showers, corporate events, and other
+            personal or professional occasions. Service details, packages, and
+            pricing will be agreed upon with clients before confirmation.
+          </p>
+        </div>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-6 mt-10 h-5"
+          style="width: 50rem"
+        />
+
+        <div>
+          <h3 class="text-2xl font-bold text-cyan-600 mb-3">
+            2. Bookings & Payments
+          </h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>
+              A booking is confirmed only after receipt of advance payment (as
+              communicated during inquiry).
+            </li>
+            <li>
+              Remaining balance must be cleared as per the agreed timeline
+              before final delivery of media.
+            </li>
+            <li>
+              Payments are non-refundable unless otherwise stated in writing.
+            </li>
+          </ul>
+        </div>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-6 mt-10 h-5"
+          style="width: 50rem"
+        />
+
+        <div>
+          <h3 class="text-2xl font-bold text-cyan-600 mb-3">
+            3. Media Usage Rights
+          </h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>
+              Clients grant us permission to use selected photographs and videos
+              for promotional purposes (website, portfolio, social media,
+              marketing).
+            </li>
+            <li>
+              Clients may use delivered media for personal, non-commercial use.
+            </li>
+            <li>
+              Copyright of all raw and edited media remains with
+              <a
+                href="index.html"
+                class="ont-bold text-cyan-600 hover:text-cyan-400 transition"
+              >
+                The Celebration Tales </a
+              >.
+            </li>
+          </ul>
+        </div>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-6 mt-10 h-5"
+          style="width: 50rem"
+        />
+
+        <div>
+          <h3 class="text-2xl font-bold text-cyan-600 mb-3">4. Deliverables</h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>
+              Final deliverables (photos, films, albums) will be shared within
+              the timeline communicated during booking.
+            </li>
+            <li>
+              Delivery may be impacted by technical issues, client delays, or
+              unforeseen circumstances (e.g., illness, natural disasters).
+            </li>
+            <li>
+              We do not guarantee delivery of raw/unprocessed files unless
+              agreed in advance.
+            </li>
+          </ul>
+        </div>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-6 mt-10 h-5"
+          style="width: 50rem"
+        />
+
+        <div>
+          <h3 class="text-2xl font-bold text-cyan-600 mb-3">
+            5. Client Responsibilities
+          </h3>
+          <ul class="list-disc list-inside space-y-2 text-gray-700">
+            <li>Provide accurate event details, timings, and venue access.</li>
+            <li>
+              Obtain required permissions (venue, religious institutions, or
+              authorities) for photography/videography.
+            </li>
+            <li>
+              Ensure timely communication regarding preferences, edits, or
+              changes.
+            </li>
+          </ul>
+        </div>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-6 mt-10 h-5"
+          style="width: 50rem"
+        />
+
+        <div>
+          <h3 class="text-2xl font-bold text-cyan-600 mb-3">
+            6. Limitations of Liability
+          </h3>
+          <p class="text-gray-700">
+            While we strive to provide the best service,<a
+              href="index.html"
+              class="ont-bold text-cyan-600 hover:text-cyan-400 transition"
+            >
+              The Celebration Tales
+            </a>
+            shall not be held liable for loss or damage caused by events beyond
+            our control (e.g., technical failures, accidents, natural
+            calamities), minor editing differences, or delays caused by client
+            actions.
+          </p>
+        </div>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-6 mt-10 h-5"
+          style="width: 50rem"
+        />
+
+        <div>
+          <h3 class="text-2xl font-bold text-cyan-600 mb-3">
+            7. Website Usage
+          </h3>
+          <p class="text-gray-700">
+            By using our website, you agree not to misuse its content, attempt
+            unauthorized access, or engage in any activity that may damage our
+            reputation or operations. Website content (images, videos, text) is
+            owned by us and cannot be copied without permission.
+          </p>
+        </div>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-6 mt-10 h-5"
+          style="width: 50rem"
+        />
+
+        <div>
+          <h3 class="text-2xl font-bold text-cyan-600 mb-3">
+            8. Changes to Terms
+          </h3>
+          <p class="text-gray-700">
+            We reserve the right to update these Terms & Conditions at any time.
+            Updated versions will be posted on this page with a revised
+            effective date.
+          </p>
+        </div>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-6 mt-10 h-5"
+          style="width: 50rem"
+        />
+
+        <div>
+          <h3 class="text-2xl font-bold text-cyan-600 mb-3">
+            9. Governing Law
+          </h3>
+          <p class="text-gray-700">
+            These Terms & Conditions shall be governed by and construed in
+            accordance with the laws of India. Any disputes shall be subject to
+            the jurisdiction of courts in Pune, Maharashtra.
+          </p>
+        </div>
+
+        <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-6 mt-10 h-5"
+          style="width: 50rem"
+        />
+
+        <div>
+          <h3 class="text-2xl font-bold text-cyan-600 mb-3">10. Contact Us</h3>
+          <p class="text-gray-700">
+            For questions or concerns regarding these Terms & Conditions, please
+            contact us at:
+          </p>
+          <p class="mt-2 text-gray-700">
+            <strong>Email:</strong> thecelebrationtales@gmail.com <br />
+            <strong>Phone:</strong> +91 8788838105 &nbsp;&nbsp; +91 8767062808
+          </p>
+        </div>
+      </div>
+
+      <!-- Line -->
+      <img
+        src="images/line.png"
+        alt="line"
+        class="mx-auto mb-6 mt-16 h-5"
+        style="width: 50rem"
+      />
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#f8f4ed] text-black py-6">
+      <div class="container mx-auto flex flex-col items-center space-y-4 px-4">
+        <div class="flex space-x-6">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="text-black hover:text-pink-500 transition"
+          >
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="text-black hover:text-blue-500 transition"
+          >
+            <i class="fab fa-facebook text-2xl"></i>
+          </a>
+          <a
+            href="https://wa.me/91XXXXXXXXXX"
+            target="_blank"
+            class="text-black hover:text-green-500 transition"
+          >
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
+        </div>
+        <p
+          class="text-sm text-center text-black tracking-widest"
+          style="word-spacing: 4px"
+        >
+          The Celebration Tales © 2025
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Celebration Tales - Our Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="w-full bg-[#f8f4ed] shadow-md">
+      <div class="mx-auto flex items-center justify-between h-[70px] px-2">
+        <!-- Logo -->
+        <div class="flex items-center h-[5rem]">
+          <a href="index.html">
+            <img
+              src="images/logo2.png"
+              alt="Logo"
+              class="h-[5rem] w-auto saturate-200 cursor-pointer"
+            />
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6 font-semibold">
+          <a href="index.html" class="hover:text-purple-600">Home</a>
+          <a href="films.html" class="hover:text-purple-600">Films</a>
+          <a href="images.html" class="hover:text-purple-600">Images</a>
+          <a href="about.html" class="hover:text-purple-600">About Us</a>
+          <a href="services.html" class="hover:text-purple-600">Services</a>
+          <a href="contact.html" class="hover:text-purple-600">Contact</a>
+          <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
+          <a href="terms.html" class="hover:text-purple-600">Terms</a>
+        </nav>
+
+        <!-- Mobile Hamburger Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <nav
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col bg-[#f8f4ed] px-4 py-2 space-y-2 font-semibold"
+      >
+        <a href="index.html" class="hover:text-purple-600">Home</a>
+        <a href="films.html" class="hover:text-purple-600">Films</a>
+        <a href="images.html" class="hover:text-purple-600">Images</a>
+        <a href="about.html" class="hover:text-purple-600">About Us</a>
+        <a href="services.html" class="hover:text-purple-600">Services</a>
+        <a href="contact.html" class="hover:text-purple-600">Contact</a>
+        <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
+        <a href="terms.html" class="hover:text-purple-600">Terms</a>
+      </nav>
+    </header>
+    <script>
+      const btn = document.getElementById("mobile-menu-button");
+      const menu = document.getElementById("mobile-menu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+
+    <!-- Page Header -->
+    <section
+      class="h-screen bg-center bg-cover relative flex items-center justify-center text-center px-6"
+      style="background-image: url('images/servicebg.jpg'); height: 60vh"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 text-white max-w-3xl mx-auto px-4 text-center">
+        <!-- Heading -->
+        <h2
+          class="text-2xl md:text-3xl lg:text-4xl font-serif font-extrabold mb-4 tracking-tight"
+        >
+          OUR
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500"
+            >SERVICES</span
+          >
+        </h2>
+
+        <!-- Description -->
+        <p
+          class="text-base md:text-lg lg:text-xl font-sans opacity-90 leading-relaxed"
+        >
+          From weddings to birthdays, baby showers to corporate events — we
+          capture every story with
+          <span class="font-semibold">passion, creativity,</span> and
+          <span class="font-semibold">timeless elegance</span>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="max-w-7xl mx-auto px-6 py-16 bg-[#f8f4ed]">
+      <img
+        src="images/dash_line.png"
+        alt="line"
+        class="mx-auto mb-6 -mt-10 h-5 filter"
+        style="width: 40rem"
+      />
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Wedding -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/Wedding/7.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Weddings</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Celebrate love’s most beautiful journey, where two hearts become
+              one, creating timeless memories filled with joy, laughter, and
+              forever.
+            </p>
+          </div>
+        </div>
+
+        <!-- Baby Shower -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/babyshower/4.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Baby Shower</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Showering love, blessings, and joy for the little one on the way,
+              celebrating life’s sweetest beginning with family and friends.
+            </p>
+          </div>
+        </div>
+
+        <!-- Birthdays -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/birthday/9.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Birthday</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Make every moment sparkle with joy, laughter, and love as we
+              celebrate life’s special gift—your unforgettable birthday day.
+            </p>
+          </div>
+        </div>
+
+        <!-- Anniversaries -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/anniversary/2.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Anniversary</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Celebrate the journey of love, togetherness, and countless
+              memories, cherishing each moment that makes your bond stronger and
+              everlasting..
+            </p>
+          </div>
+        </div>
+
+        <!-- Festivals -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/festival/8.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Festivals</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Festivals bring hearts together, spreading joy, light, and
+              happiness, celebrating traditions with love, laughter, and
+              unforgettable moments shared with family.
+            </p>
+          </div>
+        </div>
+
+        <!-- social media reels -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/customvideoinvitation.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              Social Media Reels & Highlights
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Engaging short reels for Instagram, Facebook, YouTube, and
+              WhatsApp to share memories.
+            </p>
+          </div>
+        </div>
+        <!-- school events-->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/school/6.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">School Events</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Celebrating learning, talent, and togetherness, where every child
+              shines bright, creating joyful memories that last a lifetime with
+              friends.
+            </p>
+          </div>
+        </div>
+
+        <!-- Banners -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/banner/1.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Banners & Posters</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Banners and posters that capture attention, share emotions,
+              celebrate moments, and spread messages with creativity, impact,
+              love, and joy.
+            </p>
+          </div>
+        </div>
+
+        <!-- photo shoot -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/photoshoot/3.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Photo Shoot</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Professional photo shoots capturing emotions, style, and beauty
+              with creativity, precision, and lasting visual impact.
+            </p>
+          </div>
+        </div>
+
+        <!-- video Editing -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/videoediting.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Video Editing</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Seamless editing with music, effects, and transitions for
+              stunning, polished videos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Event Invitations -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/eventinvitation.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              Event Invitations (Digital)
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Creative digital invites and teaser videos for weddings and
+              parties.
+            </p>
+          </div>
+        </div>
+
+        <!-- Photo & Video Editing -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/photovideoediting.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Photo & Video Editing</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Professional editing to enhance your event photos and videos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Pre-Wedding Shoots -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/prewedding.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Pre-Wedding Shoots</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Creative photoshoots that tell your love story before the big day.
+            </p>
+          </div>
+        </div>
+
+        <!-- Candid Photography -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/candid.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Candid Photography</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Natural, unposed shots that capture real emotions and smiles.
+            </p>
+          </div>
+        </div>
+
+        <!-- Corporate Event Coverage -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/coorporate.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              Corporate Event Coverage
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Professional photography and videography for office events,
+              seminars, and parties.
+            </p>
+          </div>
+        </div>
+
+        <!-- Short Event Trailers -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/shorttrailers.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Short Event Trailers</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              30–60 second highlight videos perfect for sharing on social media.
+            </p>
+          </div>
+        </div>
+
+        <!-- Music + Story Integration -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/music.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              Music + Story Integration
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Personalized background music and storytelling for emotional
+              films.
+            </p>
+          </div>
+        </div>
+
+        <!-- Portrait Sessions -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/portrait.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Portrait Sessions</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Professional portraits for families, kids, or individuals.
+            </p>
+          </div>
+        </div>
+
+        <!-- Save-the-Date Videos -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/savedate.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Save-the-Date Videos</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Fun and creative teaser videos to announce your special day.
+            </p>
+          </div>
+        </div>
+
+        <!-- Post-Event Editing Requestsw -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/postvideoediting.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              Post-Event Editing Requests
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Edit and re-touch photos/videos even from events not shot by us.
+            </p>
+          </div>
+        </div>
+
+        <!-- Memories Compilation -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/memeories.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Memories Compilation</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Turn old photos and clips into a new film for birthdays or
+              anniversaries.
+            </p>
+          </div>
+        </div>
+
+        <!-- Behind The Scenes (BTS) Films -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/bts.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              Behind The Scenes (BTS) Films
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Fun candid videos showing raw, unscripted moments behind your
+              event for authentic storytelling.
+            </p>
+          </div>
+        </div>
+
+        <!-- Custom Invitations Videos -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="
+            background-image: url('images/services/customvideoinvitation.jpg');
+          "
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              Custom Invitations Videos
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Personalized video invitations for weddings, birthdays, and
+              parties to impress your guests instantly.
+            </p>
+          </div>
+        </div>
+
+        <!-- Invitation & E-Card Designing -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="
+            background-image: url('images/services/invitationandecard.jpg');
+          "
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              Invitation & E-Card Designing
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Custom digital invitations and stylish e-cards for weddings,
+              birthdays, and corporate events.
+            </p>
+          </div>
+        </div>
+
+        <!-- slide show and montage creation -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/slides.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              Slideshow & Montage Creation
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Personalized slideshows with music and transitions for birthdays,
+              anniversaries, or farewell parties.
+            </p>
+          </div>
+        </div>
+
+        <!-- Event Live Streaming -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/livestreaming.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Event Live Streaming</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Broadcast weddings, concerts, or conferences live on Facebook,
+              YouTube, or Instagram.
+            </p>
+          </div>
+        </div>
+
+        <!-- Podcast & Voice Editing -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/podcast.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              Podcast & Voice Editing
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Audio editing, noise removal, and mixing for podcasts, interviews,
+              and voiceovers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Short Ads & Promo Creation -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/shortad.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              Short Ads & Promo Creation
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Quick, eye-catching video ads for Instagram, Facebook, and YouTube
+              campaigns.
+            </p>
+          </div>
+        </div>
+
+        <!--Content Repurposing -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/contentrep.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Content Repurposing</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Convert long videos into short clips, reels, or YouTube shorts for
+              better reach.
+            </p>
+          </div>
+        </div>
+
+        <!-- Corporate Headshots -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/corporateheadshot.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Corporate Headshots</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Professional portrait sessions for resumes, LinkedIn, or company
+              profiles.
+            </p>
+          </div>
+        </div>
+
+        <!-- YouTube Video Editing & Thumbnails -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/youtube\ editing.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">
+              YouTube Video Editing & Thumbnails
+            </h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Edit long-form content and create click-worthy thumbnails for
+              YouTubers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mini Documentaries -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/documentaries.jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Mini Documentaries</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Short storytelling videos for NGOs, schools, or corporate social
+              responsibility (CSR) activities.
+            </p>
+          </div>
+        </div>
+
+        <!-- Green Screen Shoots -->
+        <div
+          onclick="redirectToContact()"
+          class="group relative cursor-pointer overflow-hidden rounded-2xl shadow-lg hover:shadow-[0_8px_30px_rgba(0,0,0,0.6)] group transition duration-500 h-64 w-full bg-center bg-cover"
+          style="background-image: url('images/services/green\ screen\ .jpg')"
+        >
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition duration-500"
+          ></div>
+
+          <!-- Text Content -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center text-center px-4"
+          >
+            <h3 class="text-2xl font-bold text-white">Green Screen Shoots</h3>
+            <p class="text-gray-200 mt-2 text-sm">
+              Creative background replacement for interviews, reels, and ads.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-[#f8f4ed] text-black py-6">
+      <img
+        src="images/line.png"
+        alt="line"
+        class="mx-auto mb-10 h-5"
+        style="width: 80rem"
+      />
+      <div class="container mx-auto flex flex-col items-center space-y-4 px-4">
+        <!-- Social Icons -->
+        <div class="flex space-x-6">
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            class="text-black hover:text-pink-500 transition"
+          >
+            <i class="fab fa-instagram text-2xl"></i>
+          </a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            class="text-black hover:text-blue-500 transition"
+          >
+            <i class="fab fa-facebook text-2xl"></i>
+          </a>
+          <a
+            href="https://wa.me/91XXXXXXXXXX"
+            target="_blank"
+            class="text-black hover:text-green-500 transition"
+          >
+            <i class="fab fa-whatsapp text-2xl"></i>
+          </a>
+        </div>
+        <!-- Copyright -->
+        <p class="text-sm text-center text-black tracking-widest">
+          The Celebration Tales © 2025
+        </p>
+      </div>
+    </footer>
+    <!-- Script for redirection -->
+    <script>
+      function redirectToContact() {
+        window.location.href = "contact.html"; // Update this to your contact page URL
+      }
+    </script>
+  </body>
+</html>
