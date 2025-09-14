@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Celebration Tales</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./css/index.css" />
-    <!-- external CSS -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Celebration Tales - Contact</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <style>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-  </head>
-  <body class="text-gray-800 font-sans">
-    <!-- Header -->
-    <header class="w-full bg-[#f8f4ed] shadow-md relative">
+ /* Remove arrows in Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove arrows in Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+</style>
+</head>
+<body class="text-gray-800 font-sans">
+
+  <!-- Header -->
+ <header class="w-full bg-[#f8f4ed] shadow-md v relative">
       <div class="mx-auto flex items-center justify-between h-[70px] px-2">
         <!-- Logo -->
         <a href="index.html" class="block">
-          <img
-            src="images/logo2.png"
-            alt="Logo"
-            class="h-[4.5rem] w-auto saturate-200 cursor-pointer mt-2 -ml-2"
-          />
-        </a>
+      <img
+        src="images/logo2.png"
+        alt="Logo"
+        class="h-[4.5rem] w-auto saturate-200 cursor-pointer mt-2 -ml-2"
+      />
+    </a>
 
-      
-  <!-- Desktop Navigation -->
-        <nav class="hidden md:flex space-x-6 font-semibold mr-10">
-          <a href="index.html" class="hover:text-purple-600">Home</a>
-          <a href="films.html" class="hover:text-purple-600">Films</a>
-          <a href="images.html" class="hover:text-purple-600">Images</a>
-          <a href="about.html" class="hover:text-purple-600">About Us</a>
-          <a href="services.html" class="hover:text-purple-600">Services</a>
-          <a href="contact.html" class="hover:text-purple-600">Contact</a>
-          <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
-          <a href="terms.html" class="hover:text-purple-600">Terms</a>
-        </nav>
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:flex space-x-6 font-semibold mr-10">
+  <a href="index.html" class="hover:text-purple-600">Home</a>
+  <a href="films.html" class="hover:text-purple-600">Films</a>
+  <a href="images.html" class="hover:text-purple-600">Images</a>
+  <a href="about.html" class="hover:text-purple-600">About Us</a>
+  <a href="services.html" class="hover:text-purple-600">Services</a>
+  <a href="contact.html" class="hover:text-purple-600">Contact</a>
+  <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
+  <a href="terms.html" class="hover:text-purple-600">Terms</a>
+</nav>
 
 
-        <!-- Mobile Hamburger Button -->
+   <!-- Mobile Hamburger Button -->
 
 <div class="md:hidden">
   <button id="mobile-menu-button" class="focus:outline-none">
@@ -83,12 +93,11 @@ btn.addEventListener("click", () => {
 </script>
 
 
-  
 
     <!-- First Background Section -->
     <section class="bg-home1 relative flex flex-col items-center justify-start">
       <!-- Overlay -->
-      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
 
       <!-- Content -->
       <div class="relative z-10 text-center px-6 max-w-3xl mt-32">
@@ -391,24 +400,28 @@ btn.addEventListener("click", () => {
       </div>
     </footer>
 
-    <!-- FontAwesome CDN -->
-    <script
-      src="https://kit.fontawesome.com/your-key.js"
-      crossorigin="anonymous"
-    ></script>
+    
 
-    <!-- FontAwesome CDN -->
-    <script
-      src="https://kit.fontawesome.com/your-key.js"
-      crossorigin="anonymous"
-    ></script>
+     <!-- <script>
+const btn = document.getElementById("mobile-menu-button");
+const menu = document.getElementById("mobile-menu");
+const hamburgerIcon = document.getElementById("hamburger-icon");
+const closeIcon = document.getElementById("close-icon");
 
-    <!-- FontAwesome CDN -->
-    <script
-      src="https://kit.fontawesome.com/your-key.js"
-      crossorigin="anonymous"
-    ></script>
+btn.addEventListener("click", () => {
+  if (menu.classList.contains("hidden")) {
+    menu.classList.remove("hidden");
+    hamburgerIcon.classList.add("hidden");
+    closeIcon.classList.remove("hidden");
+  } else {
+    menu.classList.add("hidden");
+    hamburgerIcon.classList.remove("hidden");
+    closeIcon.classList.add("hidden");
+  }
+});
 
+
+</script> -->
   <script>
  document.addEventListener("DOMContentLoaded", () => {
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
@@ -428,8 +441,23 @@ btn.addEventListener("click", () => {
 });
 
 </script>
+  <script>
+ const btn = document.getElementById("mobile-menu-button");
+const menu = document.getElementById("mobile-menu");
+const hamburgerIcon = document.getElementById("hamburger-icon");
+const closeIcon = document.getElementById("close-icon");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");        // toggle mobile menu
+  hamburgerIcon.classList.toggle("hidden"); // hide/show hamburger
+  closeIcon.classList.toggle("hidden");     // show/hide cross
+});
+
+</script>
 
 
-    <script src="./js/main.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
   </body>
+
+ 
 </html>

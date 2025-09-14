@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const galleryImages = document.getElementById("galleryImages");
   const filterButtons = document.querySelectorAll(".filter-btn");
 
-  // Your imagesData object here (same as your current data)
 
   function loadGallery(category, push = true) {
     galleryTitle.textContent =
@@ -41,53 +40,52 @@ document.addEventListener("DOMContentLoaded", () => {
     categoryCardsDiv.classList.add("hidden");
     categoryGallery.classList.remove("hidden");
 
-    // Push state only if needed (click vs back)
+   
     if (push) history.pushState({ category }, "", `#${category}`);
   }
+// function setActiveButton(category) {
+//   filterButtons.forEach(b => {
+//     b.classList.remove("bg-cyan-600", "text-white");
+//     b.classList.add("bg-gray-200", "text-black");
+//   });
 
-  function setActiveButton(category) {
-    filterButtons.forEach((b) => {
-      b.classList.remove("bg-cyan-600", "text-white");
-      b.classList.add("bg-gray-200", "text-black");
-    });
+//   const activeBtn = document.querySelector(`.filter-btn[data-category="${category}"]`);
+//   if (activeBtn) {
+//     activeBtn.classList.remove("bg-gray-200", "text-black");
+//     activeBtn.classList.add("bg-cyan-600", "text-white");
+//   }
+// }
 
-    const activeBtn = document.querySelector(`.filter-btn[data-category="${category}"]`);
-    if (activeBtn) {
-      activeBtn.classList.remove("bg-gray-200", "text-black");
-      activeBtn.classList.add("bg-cyan-600", "text-white");
-    }
-  }
+  // filterButtons.forEach((btn) => {
+  //   btn.addEventListener("click", () => {
+  //     const category = btn.dataset.category;
+  //     if (category === "all") {
+  //       categoryGallery.classList.add("hidden");
+  //       categoryCardsDiv.classList.remove("hidden");
+  //     } else {
+  //       loadGallery(category);
+  //     }
+  //     setActiveButton(category);
+  //   });
+  // });
 
-  filterButtons.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const category = btn.dataset.category;
-      if (category === "all") {
-        categoryGallery.classList.add("hidden");
-        categoryCardsDiv.classList.remove("hidden");
-      } else {
-        loadGallery(category);
-      }
-      setActiveButton(category);
-    });
-  });
+  // categoryCards.forEach((card) => {
+  //   card.addEventListener("click", () => {
+  //     loadGallery(card.dataset.category);
+  //     setActiveButton(card.dataset.category);
+  //   });
+  // });
 
-  categoryCards.forEach((card) => {
-    card.addEventListener("click", () => {
-      loadGallery(card.dataset.category);
-      setActiveButton(card.dataset.category);
-    });
-  });
+// Handle browser back/forward
+// window.addEventListener("popstate", (event) => {
+//   if (event.state && event.state.category) {
+//     loadGallery(event.state.category, false);
+//     setActiveButton(event.state.category);  // reset and highlight correct one
+//   } else {
+//     categoryGallery.classList.add("hidden");
+//     categoryCardsDiv.classList.remove("hidden");
+//     setActiveButton("all"); // reset everything back to "All"
+//   }
+// });
 
-  // Handle browser back/forward button
-  window.addEventListener("popstate", (event) => {
-    if (event.state && event.state.category) {
-      loadGallery(event.state.category, false);
-      setActiveButton(event.state.category);
-    } else {
-      categoryGallery.classList.add("hidden");
-      categoryCardsDiv.classList.remove("hidden");
-      setActiveButton("all");
-    }
-  });
-});
 

@@ -108,15 +108,17 @@ btn.addEventListener("click", () => {
 <div class="mb-16 mt-10 w-full max-w-md mx-auto 
             grid grid-cols-4 grid-rows-2 gap-4 
             md:flex md:flex-row md:justify-center md:space-x-4 md:max-w-full md:grid-cols-none md:grid-rows-none">
-  <button class="filter-btn bg-cyan-600 text-white w-full h-12 rounded-lg hover:bg-cyan-500" data-category="all">All</button>
-  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="photo-shoot">Photo Shoot</button>
-  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="wedding">Wedding</button>
-  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="babyshower">Baby Shower</button>
-  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="birthday">Birthdays</button>
-  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="anniversary">Anniversaries</button>
-  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="festival">Festivals</button>
-  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="banner">Banners</button>
+
+  <button class="filter-btn bg-cyan-600 text-white w-full h-12 rounded-lg hover:bg-cyan-500 text-xs sm:text-sm md:text-base" data-category="all">All</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white text-xs sm:text-sm md:text-base" data-category="photo-shoot">Photo Shoot</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white text-xs sm:text-sm md:text-base" data-category="wedding">Wedding</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white text-xs sm:text-sm md:text-base" data-category="babyshower">Baby Shower</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white text-xs sm:text-sm md:text-base" data-category="birthday">Birthdays</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white text-xs sm:text-sm md:text-base" data-category="anniversary">Anniversaries</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white text-xs sm:text-sm md:text-base" data-category="festival">Festivals</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white text-xs sm:text-sm md:text-base" data-category="banner">Banners</button>
 </div>
+
 
 
 
@@ -490,6 +492,136 @@ btn.addEventListener("click", () => {
 </script>
     <script src="./js/main.js"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const categoryCards = Array.from(document.querySelectorAll(".category-card"));
+  const categoryGallery = document.getElementById("categoryGallery");
+  const categoryCardsDiv = document.getElementById("categoryCards");
+  const galleryTitle = document.getElementById("galleryTitle");
+  const galleryImages = document.getElementById("galleryImages");
+  const filterButtons = Array.from(document.querySelectorAll(".filter-btn"));
+
+  // Demo images per category (your existing object)
+  const imagesData = {
+    birthday: ["images/birthday/5.jpg","images/birthday/2.jpg","images/birthday/3.jpg","images/birthday/1.jpg","images/birthday/4.jpg","images/birthday/6.jpg","images/birthday/7.jpg","images/birthday/8.jpg","images/birthday/9.jpg"],
+    wedding: ["images/Wedding/1.jpg","images/Wedding/2.jpg","images/Wedding/3.jpg","images/Wedding/4.jpg","images/Wedding/5.jpg","images/Wedding/6.jpg","images/Wedding/7.jpg","images/Wedding/8.jpg","images/Wedding/9.jpg"],
+    babyshower: ["images/babyshower/1.jpg","images/babyshower/2.jpg","images/babyshower/3.jpg","images/babyshower/4.jpg","images/babyshower/5.jpg","images/babyshower/6.jpg","images/babyshower/7.jpg","images/babyshower/8.jpg","images/babyshower/9.jpg"],
+    anniversary: ["images/anniversary/1.jpg","images/anniversary/2.jpg","images/anniversary/3.jpg","images/anniversary/4.jpg","images/anniversary/5.jpg","images/anniversary/6.jpg","images/anniversary/7.jpg","images/anniversary/8.jpg","images/anniversary/9.jpg"],
+    festival: ["images/festival/1.jpg","images/festival/2.jpg","images/festival/3.jpg","images/festival/4.jpg","images/festival/5.jpg","images/festival/6.jpg","images/festival/7.jpg","images/festival/8.jpg","images/festival/9.jpg"],
+    banner: ["images/banner/1.jpg","images/babyshower2.jpg","images/babyshower3.jpg","images/babyshower4.jpg","images/babyshower5.jpg","images/babyshower6.jpg","images/babyshower7.jpg","images/babyshower8.jpg","images/babyshower9.jpg"],
+    school: ["images/school/1.jpg","images/school/2.jpg","images/school/3.jpg","images/school/4.jpg","images/school/5.jpg","images/school/6.jpg","images/school/7.jpg","images/school/8.jpg","images/school/9.jpg"],
+    "photo-shoot": ["images/photoshoot/1.jpg","images/photoshoot/9.jpg","images/photoshoot/3.jpg","images/photoshoot/4.jpg","images/photoshoot/2.jpg","images/photoshoot/6.jpg","images/photoshoot/7.jpg","images/photoshoot/8.jpg","images/photoshoot/5.jpg"]
+  };
+
+  // Debug: confirm elements found
+  // console.log({ filterButtons: filterButtons.length, categoryCards: categoryCards.length });
+
+  function clearActiveButtons() {
+    filterButtons.forEach(b => {
+      b.classList.remove("bg-cyan-600", "text-white");
+      b.classList.remove("bg-gray-200", "text-black");
+      // restore default background/text for non-active
+      b.classList.add("bg-gray-200", "text-black");
+      b.setAttribute("aria-pressed", "false");
+    });
+  }
+
+  function setActiveButton(category) {
+    clearActiveButtons();
+    const activeBtn = document.querySelector(`.filter-btn[data-category="${category}"]`);
+    if (activeBtn) {
+      activeBtn.classList.remove("bg-gray-200", "text-black");
+      activeBtn.classList.add("bg-cyan-600", "text-white");
+      activeBtn.setAttribute("aria-pressed", "true");
+    }
+  }
+
+  function buildGalleryHTML(category) {
+    galleryImages.innerHTML = "";
+    const imgs = imagesData[category] || [];
+    imgs.forEach(src => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "gallery-item";
+      wrapper.innerHTML = `<img src="${src}" class="w-full object-contain rounded-lg shadow-md cursor-pointer" alt="">`;
+      galleryImages.appendChild(wrapper);
+    });
+  }
+
+  function loadGallery(category, pushState = true) {
+    if (!imagesData[category]) {
+      console.warn("Unknown category:", category);
+      return;
+    }
+    galleryTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1) + " Gallery";
+    buildGalleryHTML(category);
+
+    // show gallery, hide cards
+    categoryCardsDiv.classList.add("hidden");
+    categoryGallery.classList.remove("hidden");
+
+    if (pushState) {
+      // push a state with the category and set the URL hash
+      history.pushState({ category }, "", `#${category}`);
+    }
+  }
+
+  // Click handlers for filter buttons
+  filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const cat = btn.dataset.category;
+      if (cat === "all") {
+        // show the category cards
+        categoryGallery.classList.add("hidden");
+        categoryCardsDiv.classList.remove("hidden");
+        history.pushState({}, "", window.location.pathname); // clear hash
+        setActiveButton("all");
+      } else {
+        loadGallery(cat, true);
+        setActiveButton(cat);
+      }
+    });
+  });
+
+  // Click handlers for category cards (the big tiles)
+  categoryCards.forEach(card => {
+    card.addEventListener("click", () => {
+      const cat = card.dataset.category;
+      if (cat && imagesData[cat]) {
+        loadGallery(cat, true);
+        setActiveButton(cat);
+      }
+    });
+  });
+
+  // popstate: handle back/forward
+  window.addEventListener("popstate", (event) => {
+    const stateCat = event.state && event.state.category;
+    const hashCat = window.location.hash.replace("#", "");
+    // Prefer state.category if present; otherwise validate the hash
+    const category = stateCat || (hashCat && imagesData[hashCat] ? hashCat : null);
+
+    if (category) {
+      // do not push state when responding to popstate
+      loadGallery(category, false);
+      setActiveButton(category);
+    } else {
+      // No category in state or hash -> show all (cards)
+      categoryGallery.classList.add("hidden");
+      categoryCardsDiv.classList.remove("hidden");
+      setActiveButton("all");
+    }
+  });
+
+  // Initial load: if there's a hash that matches a category, open it
+  const initialHash = window.location.hash.replace("#", "");
+  if (initialHash && imagesData[initialHash]) {
+    loadGallery(initialHash, false);
+    setActiveButton(initialHash);
+  } else {
+    setActiveButton("all");
+  }
+});
+</script>
 
   </body>
 </html>
