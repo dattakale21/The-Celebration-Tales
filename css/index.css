@@ -171,9 +171,7 @@ body {
 
     /* Reduce hero section height */
   .bg-home1 {
-  background-size: cover;
-  background-position: top center; /* or center center */
-  background-repeat: no-repeat;
+margin-top:-3rem;
 }
 
 
