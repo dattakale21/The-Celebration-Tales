@@ -6,7 +6,21 @@
   <title>The Celebration Tales - Contact</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
- 
+ <style>
+
+ /* Remove arrows in Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove arrows in Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+</style>
 </head>
 <body class="text-gray-800 font-sans">
 
@@ -72,7 +86,12 @@
   CONTACT <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">US</span>
 </h2>
   <!-- Line -->
-     <img src="images/dash_line.png" alt="line" class="mx-auto mb-6 mt-5  h-5 filter " style="width: 29rem;">
+    <img
+        src="images/dash_line.png"
+        alt="line"
+        class="mx-auto mb-6 mt-10 w-[80%] max-w-[29rem] h-5"
+      />
+
 
 
   <!-- Intro Content -->
@@ -102,74 +121,103 @@
 </div>
 
 
-
-  <!-- Line -->
-       <img src="images/dash_line.png" alt="line" class="mx-auto mb-6 mt-16  h-5 filter " style="width: 29rem;">
-
-
   <!-- Names & Designation -->
- <div class="text-center mb-6">
-  <p class="text-xl md:text-xl font-serif font-bold mt-[80px] tracking-wide text-gray-900">
-    Sangmesh Mehtre & Datta Kale
-  </p>
- <p class="text-gray-500 font-sans italic text-sm md:text-base mt-1">
-   Co-founder, The Celebration Tales
-</p>
+<div class="flex flex-col items-center justify-center mb-16">
+  <!-- Top Line -->
+  <img
+    src="images/dash_line.png"
+    alt="line"
+    class="mx-auto h-5 w-[80%] max-w-[29rem] filter mb-[3rem] mt-20"
+  />
 
+  <!-- Names & Designation (centered between lines) -->
+  <div class="text-center">
+    <p class="text-xl md:text-xl font-serif font-bold tracking-wide text-gray-900">
+      Sangmesh Mehtre & Datta Kale
+    </p>
+    <p class="text-gray-500 font-sans italic text-sm md:text-base mt-1">
+      Co-founder, The Celebration Tales
+    </p>
+  </div>
+
+  <!-- Bottom Line -->
+ <img
+    src="images/dash_line.png"
+    alt="line"
+    class="mx-auto h-5 w-[80%] max-w-[29rem] filter mt-[3rem]"
+  />
 </div>
 
 
 
+
   <!-- Mandatory Details -->
-  <!-- Mandatory Details -->
+
 <div class="mb-4 text-center">
-  <p class="text-sm text-black font-semibold -mb-10 mt-[80px]">Mandatory Details</p>
-  <img src="images/line.png" alt="line" class="mx-auto mb-3 w-4rem h-7 filter -mt-[18]" style="width: 29rem;">
+  <!-- Line -->
  
+
+  <!-- Mandatory Details below the line -->
+  <p class="text-sm text-black font-semibold mt-4">
+    Mandatory Details
+  </p>
+</div>
+
 </div>
 </div>
 
-  
-
   <!-- Form -->
-  <!-- Form -->
-<!-- Form -->
-<form id="myForm" class="space-y-4">
+<form id="myForm" class="space-y-4 w-[50%] max-w-6xl mx-auto px-4">
   <div class="flex flex-col md:flex-row gap-3 justify-center">
     <input type="text" placeholder="Full Name" required
-           class="w-full md:w-1/4 p-1.5 rounded-lg bg-white placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:black">
+           class="w-full md:w-1/2 p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
+                  border-2 border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 
+                  focus:shadow-lg focus:outline-none transition-all duration-200">
     <input type="email" placeholder="Email Address" required
-           class="w-full md:w-1/4 p-1.5 rounded-lg bg-white placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:black">
+           class="w-full md:w-1/2 p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
+                  border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
+                  focus:shadow-lg focus:outline-none transition-all duration-200">
   </div>
 
   <div class="flex flex-col md:flex-row gap-3 justify-center">
     <input type="number" placeholder="Mobile Number" required
-           class="w-full md:w-1/4 p-1.5 rounded-lg bg-white placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:black">
+           class="w-full md:w-1/2 p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
+                  border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
+                  focus:shadow-lg focus:outline-none transition-all duration-200">
     <input type="text" placeholder="Email Subject" required
-           class="w-full md:w-1/4 p-1.5 rounded-lg bg-white placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:black">
+           class="w-full md:w-1/2 p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
+                  border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
+                  focus:shadow-lg focus:outline-none transition-all duration-200">
   </div>
 
   <textarea rows="7" placeholder="Your Message" required
-            class="w-full md:w-1/2 p-1.5 rounded-lg bg-white placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:black mx-auto block resize-none"></textarea>
+            class="w-full md:w-full p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
+                   border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
+                   focus:shadow-lg focus:outline-none resize-none transition-all duration-200"></textarea>
 
-  <!-- Submit -->
   <div class="flex justify-center">
-  <button type="submit" 
-        class="relative inline-block px-4 py-2 mt-7 rounded-full font-semibold text-white 
-               text-sm bg-gradient-to-r from-cyan-500 to-blue-500 
-               shadow-[0_4px_15px_rgba(6,182,212,0.6)] 
-               hover:shadow-[0_6px_20px_rgba(6,182,212,0.8)] 
-               hover:from-blue-500 hover:to-cyan-500 transition-all duration-300">
-  <span class="relative">Send Message</span>
-</button>
-
-
+    <button type="submit" 
+            class="relative inline-block px-4 py-2 mt-7 rounded-full font-semibold text-white 
+                   text-sm bg-gradient-to-r from-cyan-500 to-blue-500 
+                   shadow-[0_4px_15px_rgba(6,182,212,0.6)] 
+                   hover:shadow-[0_6px_20px_rgba(6,182,212,0.9)] 
+                   hover:from-blue-500 hover:to-cyan-500 transition-all duration-300">
+      <span class="relative">Send Message</span>
+    </button>
   </div>
 </form>
 
 
+
+
+
   <!-- Line -->
-    <img src="images/line.png" alt="line" class="mx-auto mb-3 w-4rem h-7 filter mt-9" style="width: 29rem;">
+    <img
+  src="images/line.png"
+  alt="line"
+  class="mx-auto mb-3 h-7 w-[80%] max-w-[29rem] filter mt-[4rem]"
+/>
+
     
     
     <!-- Email Info -->
@@ -196,7 +244,12 @@
     </div>
     
     <!-- Line -->
-    <img src="images/line.png" alt="line" class="mx-auto mb-3 w-4rem h-7 filter mt-9" style="width: 29rem;">
+   <img
+  src="images/line.png"
+  alt="line"
+  class="mx-auto mb-3 h-7 w-[80%] max-w-[29rem] filter -mt-[18px]"
+/>
+
 </section>
 
 <!-- Footer -->
