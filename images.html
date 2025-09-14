@@ -88,8 +88,8 @@ btn.addEventListener("click", () => {
 
     <!-- Gallery Section -->
     <section class="py-12 px-6 bg-[#f8f4ed]">
-      <h2
-        class="text-2xl md:text-3xl text-center lg:text-4xl font-serif font-extrabold mb-4 -mt-10 tracking-tight"
+        <h2
+        class="text-2xl md:text-3xl lg:text-4xl font-serif text-center font-extrabold mb-4 -mt-6 tracking-tight"
       >
         IMAGES
         <span
@@ -104,58 +104,22 @@ btn.addEventListener("click", () => {
         style="width: 29rem"
       />
 
-      <!-- Filters -->
-      <div class="flex flex-wrap justify-center space-x-4 mb-16 mt-10">
-        <button
-          class="filter-btn bg-cyan-600 text-white px-4 py-2 rounded-lg hover:bg-cyan-500"
-          data-category="all"
-        >
-          All
-        </button>
-        <button
-          class="filter-btn bg-gray-200 px-4 py-2 rounded-lg hover:bg-cyan-500 hover:text-white"
-          data-category="photo-shoot"
-        >
-          Photo Shoot
-        </button>
-        <button
-          class="filter-btn bg-gray-200 px-4 py-2 rounded-lg hover:bg-cyan-500 hover:text-white"
-          data-category="wedding"
-        >
-          Wedding
-        </button>
-        <button
-          class="filter-btn bg-gray-200 px-4 py-2 rounded-lg hover:bg-cyan-500 hover:text-white"
-          data-category="babyshower"
-        >
-          Baby Shower
-        </button>
-        <button
-          class="filter-btn bg-gray-200 px-4 py-2 rounded-lg hover:bg-cyan-500 hover:text-white"
-          data-category="birthday"
-        >
-          Birthdays
-        </button>
-        <button
-          class="filter-btn bg-gray-200 px-4 py-2 rounded-lg hover:bg-cyan-500 hover:text-white"
-          data-category="anniversary"
-        >
-          Anniversaries
-        </button>
-        <button
-          class="filter-btn bg-gray-200 px-4 py-2 rounded-lg hover:bg-cyan-500 hover:text-white"
-          data-category="festival"
-        >
-          Festivals
-        </button>
-        <button
-          class="filter-btn bg-gray-200 px-4 py-2 rounded-lg hover:bg-cyan-500 hover:text-white"
-          data-category="banner"
-        >
-          Banners
-        </button>
-        <!-- <button class="filter-btn bg-gray-200 px-4 py-2 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="school">School Event</button> -->
-      </div>
+   <!-- Filters -->
+<div class="mb-16 mt-10 w-full max-w-md mx-auto 
+            grid grid-cols-4 grid-rows-2 gap-4 
+            md:flex md:flex-row md:justify-center md:space-x-4 md:max-w-full md:grid-cols-none md:grid-rows-none">
+  <button class="filter-btn bg-cyan-600 text-white w-full h-12 rounded-lg hover:bg-cyan-500" data-category="all">All</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="photo-shoot">Photo Shoot</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="wedding">Wedding</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="babyshower">Baby Shower</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="birthday">Birthdays</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="anniversary">Anniversaries</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="festival">Festivals</button>
+  <button class="filter-btn bg-gray-200 w-full h-12 rounded-lg hover:bg-cyan-500 hover:text-white" data-category="banner">Banners</button>
+</div>
+
+
+
 
       <!-- Category Cards (3x3 Grid) -->
       <div
@@ -352,14 +316,14 @@ btn.addEventListener("click", () => {
         </div>
       </div>
 
-      <!-- Category Gallery (Hidden by Default) -->
+    
       <div id="categoryGallery" class="hidden">
-        <button
+        <!-- <button
           id="backBtn"
           class="mb-6 bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600"
         >
           &larr; Back
-        </button>
+        </button> -->
         <h2 id="galleryTitle" class="text-3xl text-center font-bold mb-16"></h2>
         <div
           id="galleryImages"
@@ -378,12 +342,12 @@ btn.addEventListener("click", () => {
         class="absolute top-4 right-6 text-white text-3xl cursor-pointer"
         >&times;</span
       >
-      <img
-        id="modalImage"
-        src=""
-        alt="Full View"
-        class="max-h-[80vh] max-w-[90vw] rounded-lg shadow-lg"
-      />
+     <img
+          src="images/line.png"
+          alt="line"
+          class="mx-auto mb-2 mt-16 h-5"
+          style="width: 60rem"
+        />
     </div>
 
     <!-- Footer -->
@@ -426,208 +390,106 @@ btn.addEventListener("click", () => {
       </div>
     </footer>
 
-    <script>
-      const categoryCards = document.querySelectorAll(".category-card");
-      const categoryGallery = document.getElementById("categoryGallery");
-      const categoryCardsDiv = document.getElementById("categoryCards");
-      const galleryTitle = document.getElementById("galleryTitle");
-      const galleryImages = document.getElementById("galleryImages");
-      const backBtn = document.getElementById("backBtn");
-      const filterButtons = document.querySelectorAll(".filter-btn");
+  <script>
+  // Wait until DOM is loaded
+  document.addEventListener("DOMContentLoaded", () => {
+    const categoryCards = document.querySelectorAll(".category-card");
+    const categoryGallery = document.getElementById("categoryGallery");
+    const categoryCardsDiv = document.getElementById("categoryCards");
+    const galleryTitle = document.getElementById("galleryTitle");
+    const galleryImages = document.getElementById("galleryImages");
+    const filterButtons = document.querySelectorAll(".filter-btn");
 
-      // Demo images per category (unchanged)
-      const imagesData = {
-        birthday: [
-          "images/birthday/5.jpg",
-          "images/birthday/2.jpg",
-          "images/birthday/3.jpg",
-          "images/birthday/1.jpg",
-          "images/birthday/4.jpg",
-          "images/birthday/6.jpg",
-          "images/birthday/7.jpg",
-          "images/birthday/8.jpg",
-          "images/birthday/9.jpg",
-        ],
-        wedding: [
-          "images/Wedding/1.jpg",
-          "images/Wedding/2.jpg",
-          "images/Wedding/3.jpg",
-          "images/Wedding/4.jpg",
-          "images/Wedding/5.jpg",
-          "images/Wedding/6.jpg",
-          "images/Wedding/7.jpg",
-          "images/Wedding/8.jpg",
-          "images/Wedding/9.jpg",
-        ],
-        babyshower: [
-          "images/babyshower/1.jpg",
-          "images/babyshower/2.jpg",
-          "images/babyshower/3.jpg",
-          "images/babyshower/4.jpg",
-          "images/babyshower/5.jpg",
-          "images/babyshower/6.jpg",
-          "images/babyshower/7.jpg",
-          "images/babyshower/8.jpg",
-          "images/babyshower/9.jpg",
-        ],
-        anniversary: [
-          "images/anniversary/1.jpg",
-          "images/anniversary/2.jpg",
-          "images/anniversary/3.jpg",
-          "images/anniversary/4.jpg",
-          "images/anniversary/5.jpg",
-          "images/anniversary/6.jpg",
-          "images/anniversary/7.jpg",
-          "images/anniversary/8.jpg",
-          "images/anniversary/9.jpg",
-        ],
-        festival: [
-          "images/festival/1.jpg",
-          "images/festival/2.jpg",
-          "images/festival/3.jpg",
-          "images/festival/4.jpg",
-          "images/festival/5.jpg",
-          "images/festival/6.jpg",
-          "images/festival/7.jpg",
-          "images/festival/8.jpg",
-          "images/festival/9.jpg",
-        ],
-        banner: [
-          "images/banner/1.jpg",
-          "images/babyshower2.jpg",
-          "images/babyshower3.jpg",
-          "images/babyshower4.jpg",
-          "images/babyshower5.jpg",
-          "images/babyshower6.jpg",
-          "images/babyshower7.jpg",
-          "images/babyshower8.jpg",
-          "images/babyshower9.jpg",
-        ],
-        school: [
-          "images/school/1.jpg",
-          "images/school/2.jpg",
-          "images/school/3.jpg",
-          "images/school/4.jpg",
-          "images/school/5.jpg",
-          "images/school/6.jpg",
-          "images/school/7.jpg",
-          "images/school/8.jpg",
-          "images/school/9.jpg",
-        ],
-        "photo-shoot": [
-          "images/photoshoot/1.jpg",
-          "images/photoshoot/9.jpg",
-          "images/photoshoot/3.jpg",
-          "images/photoshoot/4.jpg",
-          "images/photoshoot/2.jpg",
-          "images/photoshoot/6.jpg",
-          "images/photoshoot/7.jpg",
-          "images/photoshoot/8.jpg",
-          "images/photoshoot/5.jpg",
-        ],
-      };
+    // Demo images per category
+    const imagesData = {
+      birthday: ["images/birthday/5.jpg","images/birthday/2.jpg","images/birthday/3.jpg","images/birthday/1.jpg","images/birthday/4.jpg","images/birthday/6.jpg","images/birthday/7.jpg","images/birthday/8.jpg","images/birthday/9.jpg"],
+      wedding: ["images/Wedding/1.jpg","images/Wedding/2.jpg","images/Wedding/3.jpg","images/Wedding/4.jpg","images/Wedding/5.jpg","images/Wedding/6.jpg","images/Wedding/7.jpg","images/Wedding/8.jpg","images/Wedding/9.jpg"],
+      babyshower: ["images/babyshower/1.jpg","images/babyshower/2.jpg","images/babyshower/3.jpg","images/babyshower/4.jpg","images/babyshower/5.jpg","images/babyshower/6.jpg","images/babyshower/7.jpg","images/babyshower/8.jpg","images/babyshower/9.jpg"],
+      anniversary: ["images/anniversary/1.jpg","images/anniversary/2.jpg","images/anniversary/3.jpg","images/anniversary/4.jpg","images/anniversary/5.jpg","images/anniversary/6.jpg","images/anniversary/7.jpg","images/anniversary/8.jpg","images/anniversary/9.jpg"],
+      festival: ["images/festival/1.jpg","images/festival/2.jpg","images/festival/3.jpg","images/festival/4.jpg","images/festival/5.jpg","images/festival/6.jpg","images/festival/7.jpg","images/festival/8.jpg","images/festival/9.jpg"],
+      banner: ["images/banner/1.jpg","images/babyshower2.jpg","images/babyshower3.jpg","images/babyshower4.jpg","images/babyshower5.jpg","images/babyshower6.jpg","images/babyshower7.jpg","images/babyshower8.jpg","images/babyshower9.jpg"],
+      school: ["images/school/1.jpg","images/school/2.jpg","images/school/3.jpg","images/school/4.jpg","images/school/5.jpg","images/school/6.jpg","images/school/7.jpg","images/school/8.jpg","images/school/9.jpg"],
+      "photo-shoot": ["images/photoshoot/1.jpg","images/photoshoot/9.jpg","images/photoshoot/3.jpg","images/photoshoot/4.jpg","images/photoshoot/2.jpg","images/photoshoot/6.jpg","images/photoshoot/7.jpg","images/photoshoot/8.jpg","images/photoshoot/5.jpg"]
+    };
 
-      // Function to load gallery for a category
-      function loadGallery(category) {
-        galleryTitle.textContent =
-          category.charAt(0).toUpperCase() + category.slice(1) + " Gallery";
-        galleryImages.innerHTML = "";
-
-        imagesData[category].forEach((img) => {
-          galleryImages.innerHTML += `
-  <div class="gallery-item">
-    <img src="${img}" class="w-full object-contain rounded-lg shadow-md cursor-pointer">
-  </div>`;
-        });
-
-        categoryCardsDiv.classList.add("hidden");
-        categoryGallery.classList.remove("hidden");
-      }
-
-      // Function to set active button
-      function setActiveButton(category) {
-        filterButtons.forEach((b) => {
-          b.classList.remove("bg-cyan-600", "text-white");
-          b.classList.add("bg-gray-200", "text-black");
-        });
-
-        const activeBtn = document.querySelector(
-          `.filter-btn[data-category="${category}"]`
-        );
-        if (activeBtn) {
-          activeBtn.classList.remove("bg-gray-200", "text-black");
-          activeBtn.classList.add("bg-cyan-600", "text-white");
-        }
-      }
-
-      // Filter button click
-      filterButtons.forEach((btn) => {
-        btn.addEventListener("click", () => {
-          const category = btn.dataset.category;
-
-          if (category === "all") {
-            categoryGallery.classList.add("hidden");
-            categoryCardsDiv.classList.remove("hidden");
-          } else {
-            loadGallery(category);
-          }
-
-          setActiveButton(category);
-        });
+    // Function to load gallery
+    function loadGallery(category, pushState = true) {
+      galleryTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1) + " Gallery";
+      galleryImages.innerHTML = "";
+      imagesData[category].forEach(img => {
+        galleryImages.innerHTML += `
+          <div class="gallery-item">
+            <img src="${img}" class="w-full object-contain rounded-lg shadow-md cursor-pointer">
+          </div>`;
       });
 
-      // Category card click
-      categoryCards.forEach((card) => {
-        card.addEventListener("click", () => {
-          const category = card.dataset.category;
+      categoryCardsDiv.classList.add("hidden");
+      categoryGallery.classList.remove("hidden");
+
+      if(pushState) {
+        history.pushState({ category }, "", `#${category}`);
+      }
+    }
+
+    // Set active filter button
+    function setActiveButton(category) {
+      filterButtons.forEach(b => {
+        b.classList.remove("bg-cyan-600","text-white");
+        b.classList.add("bg-gray-200","text-black");
+      });
+      const activeBtn = document.querySelector(`.filter-btn[data-category="${category}"]`);
+      if(activeBtn){
+        activeBtn.classList.remove("bg-gray-200","text-black");
+        activeBtn.classList.add("bg-cyan-600","text-white");
+      }
+    }
+
+    // Filter buttons click
+    filterButtons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const category = btn.dataset.category;
+        if(category === "all") {
+          categoryGallery.classList.add("hidden");
+          categoryCardsDiv.classList.remove("hidden");
+          history.pushState({}, "", window.location.pathname);
+        } else {
           loadGallery(category);
-          setActiveButton(category);
-        });
+        }
+        setActiveButton(category);
       });
+    });
 
-      // Back button → reset to "All"
-      backBtn.addEventListener("click", () => {
+    // Category card click
+    categoryCards.forEach(card => {
+      card.addEventListener("click", () => {
+        const category = card.dataset.category;
+        loadGallery(category);
+        setActiveButton(category);
+      });
+    });
+
+    // Handle browser back/forward
+    window.addEventListener("popstate", (event) => {
+      if(event.state && event.state.category) {
+        loadGallery(event.state.category, false);
+        setActiveButton(event.state.category);
+      } else {
         categoryGallery.classList.add("hidden");
         categoryCardsDiv.classList.remove("hidden");
         setActiveButton("all");
-      });
+      }
+    });
 
-      // Modal (unchanged)
-      const modal = document.getElementById("modal");
-      const modalImg = document.getElementById("modalImage");
-      const closeModal = document.getElementById("closeModal");
-
-      document.body.addEventListener("click", (e) => {
-        if (e.target.closest(".gallery-item img")) {
-          modal.classList.remove("hidden");
-          modal.classList.add("flex");
-          modalImg.src = e.target.src;
-        }
-      });
-
-      closeModal.addEventListener("click", () => {
-        modal.classList.add("hidden");
-      });
-    </script>
-
-    <script>
-  document.addEventListener("DOMContentLoaded", () => {
-  const currentPath = window.location.pathname.split("/").pop() || "index.html";
-
-  // Select all nav links from desktop + mobile menus
-  const navLinks = document.querySelectorAll("header nav a");
-
-  navLinks.forEach(link => {
-    // Remove any pre-existing active classes
-    link.classList.remove("text-blue-500", "font-bold");
-
-    // Add active class if href matches current page
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("text-blue-500", "font-bold");
+    // Initialize gallery if URL has a hash
+    const initialCategory = window.location.hash.replace("#","");
+    if(initialCategory && imagesData[initialCategory]){
+      loadGallery(initialCategory, false);
+      setActiveButton(initialCategory);
     }
   });
-});
+</script>
+    <script src="./js/main.js"></script>
 
-    </script>
+
   </body>
 </html>
