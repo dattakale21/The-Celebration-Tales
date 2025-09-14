@@ -16,6 +16,14 @@ body {
   background-repeat: no-repeat;
 }
 
+.bg-home4 {
+  background-image: url('../images/home4.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
 /* Tablets */
 @media screen and (max-width: 1024px) {
   .bg-home1 {
@@ -167,16 +175,10 @@ body {
   background-position: top center; /* or center center */
   background-repeat: no-repeat;
 }
-.purple1{
-    margin-top:-20rem;
-    
-}
 
 
-
-
-.purple4 .purple1 .purple2 .purple3 .overlay {
-  background-color: rgba(0,0,0,0.5); /* 10% opacity */
+/* .purple4 .purple1 .purple2 .purple3 .overlay {
+  background-color: rgba(0,0,0,0.5);
 }
     .wedding {
         margin-top: -33rem;
@@ -194,20 +196,20 @@ body {
         height: 50vh;
     }
 
-    /* Adjust heading text sizes */
+   
     h2 {
         font-size: 1.5rem;
-        /* smaller for mobile */
+       
     }
 
-    /* Adjust paragraph text size */
+   
     p {
         font-size: 0.9rem;
     }
 
-    /* Adjust navbar items */
+    
     nav a {
         font-size: 1.4rem;
         padding: 0 1rem;
     }
-}
+} */
