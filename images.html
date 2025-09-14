@@ -17,16 +17,16 @@
   </head>
   <body class="bg-gray-100">
     <!-- Header -->
-    <header class="w-full bg-[#f8f4ed] shadow-md">
+    <header class="w-full bg-[#f8f4ed] shadow-md relative">
       <div class="mx-auto flex items-center justify-between h-[70px] px-2">
         <!-- Logo -->
         <a href="index.html" class="block">
-      <img
-        src="images/logo2.png"
-        alt="Logo"
-        class="h-[4.5rem] w-auto saturate-200 cursor-pointer mt-2 -ml-2"
-      />
-    </a>
+          <img
+            src="images/logo2.png"
+            alt="Logo"
+            class="h-[4.5rem] w-auto saturate-200 cursor-pointer mt-2 -ml-2"
+          />
+        </a>
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex space-x-6 font-semibold mr-10">
@@ -40,37 +40,51 @@
           <a href="terms.html" class="hover:text-purple-600">Terms</a>
         </nav>
 
-        <!-- Mobile Hamburger Button -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button">
-            <i class="fas fa-bars text-2xl"></i>
-          </button>
-        </div>
-      </div>
+       <!-- Mobile Hamburger Button -->
 
-      <!-- Mobile Navigation Menu -->
-      <nav
- id="mobile-menu"
-  class="hidden md:hidden flex flex-col bg-[#f8f4ed] px-6 py-4 space-y-4 font-semibold text-lg"
-      >
-        <a href="index.html" class="hover:text-purple-600">Home</a>
-        <a href="films.html" class="hover:text-purple-600">Films</a>
-        <a href="images.html" class="hover:text-purple-600">Images</a>
-        <a href="about.html" class="hover:text-purple-600">About Us</a>
-        <a href="services.html" class="hover:text-purple-600">Services</a>
-        <a href="contact.html" class="hover:text-purple-600">Contact</a>
-        <a href="privacy.html" class="hover:text-purple-600">Privacy</a>
-        <a href="terms.html" class="hover:text-purple-600">Terms</a>
-      </nav>
+<div class="md:hidden">
+  <button id="mobile-menu-button" class="focus:outline-none">
+    <!-- Hamburger -->
+    <i id="hamburger-icon" class="fas fa-bars text-xl text-brown"></i>
+    <!-- Cross -->
+    <i id="close-icon" class="fas fa-times text-xl text-brown hidden"></i>
+  </button>
+</div>
+
+
+<!-- Mobile Navigation Menu -->
+<!-- Mobile Navigation Menu (hidden by default) -->
+<nav id="mobile-menu" class="absolute top-full left-0 w-full flex flex-col bg-[#f8f4ed] px-3 py-1 space-y-1 font-medium text-base z-50 hidden"
+     style="box-shadow: 0 4px 4px rgba(0,0,0,0.4);">
+  <a href="index.html" class="hover:text-purple-600 py-2 px-4">Home</a>
+  <a href="films.html" class="hover:text-purple-600 py-2 px-4">Films</a>
+  <a href="images.html" class="hover:text-purple-600 py-2 px-4">Images</a>
+  <a href="about.html" class="hover:text-purple-600 py-2 px-4">About Us</a>
+  <a href="services.html" class="hover:text-purple-600 py-2 px-4">Services</a>
+  <a href="contact.html" class="hover:text-purple-600 py-2 px-4">Contact</a>
+  <a href="privacy.html" class="hover:text-purple-600 py-2 px-4">Privacy</a>
+  <a href="terms.html" class="hover:text-purple-600 py-2 px-4">Terms</a>
+</nav>
+
+
     </header>
-    <script>
-      const btn = document.getElementById("mobile-menu-button");
-      const menu = document.getElementById("mobile-menu");
+   <script>
+ const btn = document.getElementById("mobile-menu-button");
+const menu = document.getElementById("mobile-menu");
+const hamburgerIcon = document.getElementById("hamburger-icon");
+const closeIcon = document.getElementById("close-icon");
 
-      btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-      });
+btn.addEventListener("click", () => {
+  menu.classList.toggle("hidden");        // toggle mobile menu
+  hamburgerIcon.classList.toggle("hidden"); // hide/show hamburger
+  closeIcon.classList.toggle("hidden");     // show/hide cross
+});
+
+</script>
+
+
     </script>
+
 
     <!-- Gallery Section -->
     <section class="py-12 px-6 bg-[#f8f4ed]">
@@ -594,6 +608,26 @@
       closeModal.addEventListener("click", () => {
         modal.classList.add("hidden");
       });
+    </script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+  // Select all nav links from desktop + mobile menus
+  const navLinks = document.querySelectorAll("header nav a");
+
+  navLinks.forEach(link => {
+    // Remove any pre-existing active classes
+    link.classList.remove("text-blue-500", "font-bold");
+
+    // Add active class if href matches current page
+    if (link.getAttribute("href") === currentPath) {
+      link.classList.add("text-blue-500", "font-bold");
+    }
+  });
+});
+
     </script>
   </body>
 </html>
