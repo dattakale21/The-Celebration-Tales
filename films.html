@@ -928,83 +928,62 @@ btn.addEventListener("click", () => {
       </div>
     </footer>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-  const currentPath = window.location.pathname.split("/").pop() || "index.html";
-
-  // Select all nav links from desktop + mobile menus
-  const navLinks = document.querySelectorAll("header nav a");
-
-  navLinks.forEach(link => {
-    // Remove any pre-existing active classes
-    link.classList.remove("text-blue-500", "font-bold");
-
-    // Add active class if href matches current page
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("text-blue-500", "font-bold");
-    }
-  });
-});
-
+   <script>
 document.addEventListener("DOMContentLoaded", () => {
   const videos = document.querySelectorAll("section video");
 
-  const options = {
-    root: null, // viewport
-    rootMargin: "0px",
-    threshold: [0.5] // 50% visible
-  };
+  const isMobile = window.innerWidth <= 768; // mobile/tablet threshold
+  let activeVideo = null;
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const video = entry.target;
-      if (entry.isIntersecting) {
-        // Play video when 50% visible
-        video.play();
-      } else {
-        // Pause when less than 50% visible
-        video.pause();
-      }
+  if (isMobile) {
+    // Mobile / tablet → autoplay on scroll, only one video at a time
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // 50% visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target;
+
+        if (entry.isIntersecting) {
+          if (activeVideo !== video) {
+            if (activeVideo) activeVideo.pause();
+            activeVideo = video;
+            video.muted = false; // play with audio
+            video.currentTime = 0;
+            video.play();
+          }
+        } else {
+          if (activeVideo === video) {
+            video.pause();
+            activeVideo = null;
+          }
+        }
+      });
+    }, observerOptions);
+
+    videos.forEach((video) => {
+      video.muted = false; // unmute for autoplay
+      observer.observe(video);
     });
-  }, options);
-
-  videos.forEach(video => {
-    // Ensure muted so autoplay works on mobile
-    video.muted = true;
-    observer.observe(video);
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const videos = document.querySelectorAll("section video");
-
-  const options = {
-    root: null, // viewport
-    rootMargin: "0px",
-    threshold: [0.5] // 50% visible
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      const video = entry.target;
-      if (entry.isIntersecting) {
-        // Play video when 50% visible
+  } else {
+    // Desktop / laptop → play only on hover
+    videos.forEach((video) => {
+      video.muted = false; // allow sound
+      video.addEventListener("mouseenter", () => {
+        video.currentTime = 0;
         video.play();
-      } else {
-        // Pause when less than 50% visible
+      });
+      video.addEventListener("mouseleave", () => {
         video.pause();
-      }
+      });
     });
-  }, options);
-
-  videos.forEach(video => {
-    // Ensure muted so autoplay works on mobile
-    video.muted = true;
-    observer.observe(video);
-  });
+  }
 });
+</script>
 
-    </script>
     <script src="./js/main.js"></script>
 
   </body>
