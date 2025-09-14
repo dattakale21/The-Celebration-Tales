@@ -822,54 +822,83 @@ btn.addEventListener("click", () => {
 
     <!-- Hover Play Script -->
     <script>
-      const modal = document.getElementById("video-modal");
-      const modalVideo = document.getElementById("modal-video");
-      const closeModal = document.getElementById("close-modal");
+document.addEventListener("DOMContentLoaded", () => {
+  const videos = document.querySelectorAll("section video");
+  const modal = document.getElementById("video-modal");
+  const modalVideo = document.getElementById("modal-video");
+  const closeModal = document.getElementById("close-modal");
 
-      // Hover play/pause for grid preview videos
-      document.querySelectorAll("section video").forEach((video) => {
-        video.addEventListener("mouseenter", () => {
-          video.muted = false; // ✅ with sound
-          video.currentTime = 0;
-          video.play();
+  const isMobile = window.innerWidth <= 768;
+  let activeVideo = null;
+
+  if (isMobile) {
+    // Mobile → autoplay on scroll
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const video = entry.target;
+          if (entry.isIntersecting && !modal.classList.contains("flex")) {
+            if (activeVideo && activeVideo !== video) activeVideo.pause();
+            activeVideo = video;
+            video.muted = false; // allow sound on mobile autoplay
+            video.currentTime = 0;
+            video.play();
+          } else if (activeVideo === video) {
+            video.pause();
+            activeVideo = null;
+          }
         });
-        video.addEventListener("mouseleave", () => {
-          video.pause();
-        });
+      },
+      { threshold: 0.5 }
+    );
 
-        // Click → open modal with full video
-        video.addEventListener("click", () => {
-          modal.classList.remove("hidden");
-          modal.classList.add("flex");
-
-          // Load video source
-          modalVideo.src = video.querySelector("source").src;
-          modalVideo.currentTime = 0;
-
-          modalVideo.muted = false;
-          modalVideo.loop = true; // ✅ loop enabled
-          modalVideo.play();
-        });
+    videos.forEach((video) => observer.observe(video));
+  } else {
+    // Desktop → hover preview
+    videos.forEach((video) => {
+      video.muted = true; // muted preview
+      video.addEventListener("mouseenter", () => {
+        video.currentTime = 0;
+        video.play();
       });
-
-      // Close modal when clicking X
-      closeModal.addEventListener("click", () => {
-        modal.classList.add("hidden");
-        modal.classList.remove("flex");
-        modalVideo.pause();
-        modalVideo.src = "";
+      video.addEventListener("mouseleave", () => {
+        video.pause();
       });
+    });
+  }
 
-      // Close when clicking outside the video
-      modal.addEventListener("click", (e) => {
-        if (e.target === modal) {
-          modal.classList.add("hidden");
-          modal.classList.remove("flex");
-          modalVideo.pause();
-          modalVideo.src = "";
-        }
-      });
-    </script>
+  // Modal logic (all devices)
+  videos.forEach((video) => {
+    video.addEventListener("click", () => {
+      if (activeVideo) activeVideo.pause(); // stop scrolling video
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      modalVideo.src = video.querySelector("source").src;
+      modalVideo.currentTime = 0;
+      modalVideo.muted = false;
+      modalVideo.loop = true;
+      modalVideo.play();
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    modalVideo.pause();
+    modalVideo.src = "";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      modalVideo.pause();
+      modalVideo.src = "";
+    }
+  });
+});
+</script>
+
 
     <!-- CTA Section -->
     <section
@@ -931,27 +960,29 @@ btn.addEventListener("click", () => {
    <script>
 document.addEventListener("DOMContentLoaded", () => {
   const videos = document.querySelectorAll("section video");
+  const modal = document.getElementById("video-modal");
+  const modalVideo = document.getElementById("modal-video");
+  const closeModal = document.getElementById("close-modal");
 
-  const isMobile = window.innerWidth <= 768; // mobile/tablet threshold
+  const isMobile = window.innerWidth <= 768;
   let activeVideo = null;
 
   if (isMobile) {
-    // Mobile / tablet → autoplay on scroll, only one video at a time
+    // Mobile → autoplay on scroll, only one video at a time
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.5, // 50% visible
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         const video = entry.target;
-
         if (entry.isIntersecting) {
-          if (activeVideo !== video) {
+          if (activeVideo !== video && !modal.classList.contains("flex")) {
             if (activeVideo) activeVideo.pause();
             activeVideo = video;
-            video.muted = false; // play with audio
+            video.muted = false;
             video.currentTime = 0;
             video.play();
           }
@@ -965,13 +996,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }, observerOptions);
 
     videos.forEach((video) => {
-      video.muted = false; // unmute for autoplay
+      video.muted = false;
       observer.observe(video);
     });
   } else {
-    // Desktop / laptop → play only on hover
+    // Desktop → play only on hover
     videos.forEach((video) => {
-      video.muted = false; // allow sound
+      video.muted = false;
       video.addEventListener("mouseenter", () => {
         video.currentTime = 0;
         video.play();
@@ -981,8 +1012,44 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  // Modal logic (all devices)
+  videos.forEach((video) => {
+    video.addEventListener("click", () => {
+      // Pause the active scrolling video (if any)
+      if (activeVideo) {
+        activeVideo.pause();
+      }
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+
+      modalVideo.src = video.querySelector("source").src;
+      modalVideo.currentTime = 0;
+      modalVideo.muted = false;
+      modalVideo.loop = true;
+      modalVideo.play();
+    });
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    modalVideo.pause();
+    modalVideo.src = "";
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      modalVideo.pause();
+      modalVideo.src = "";
+    }
+  });
 });
 </script>
+
 
     <script src="./js/main.js"></script>
 
