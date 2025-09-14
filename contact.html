@@ -32,7 +32,7 @@ input[type=number] {
       <img
         src="images/logo2.png"
         alt="Logo"
-        class="h-[4.5rem] w-auto saturate-200 cursor-pointer mt-1.6 -ml-2"
+        class="h-[4.5rem] w-auto saturate-200 cursor-pointer mt-2 -ml-2"
       />
     </a>
 
@@ -167,34 +167,38 @@ input[type=number] {
 </div>
 
   <!-- Form -->
-<form id="myForm" class="space-y-4 w-[50%] max-w-6xl mx-auto px-4">
-  <div class="flex flex-col md:flex-row gap-3 justify-center">
+<form id="myForm" class="space-y-4 w-[90%] max-w-6xl mx-auto px-4">
+  <!-- Row 1 -->
+  <div class="flex flex-wrap gap-3 justify-center">
     <input type="text" placeholder="Full Name" required
-           class="w-full md:w-1/2 p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
+           class="flex-1 min-w-[150px] p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
                   border-2 border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 
                   focus:shadow-lg focus:outline-none transition-all duration-200">
     <input type="email" placeholder="Email Address" required
-           class="w-full md:w-1/2 p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
+           class="flex-1 min-w-[150px] p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
                   border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
                   focus:shadow-lg focus:outline-none transition-all duration-200">
   </div>
 
-  <div class="flex flex-col md:flex-row gap-3 justify-center">
+  <!-- Row 2 -->
+  <div class="flex flex-wrap gap-3 justify-center">
     <input type="number" placeholder="Mobile Number" required
-           class="w-full md:w-1/2 p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
+           class="flex-1 min-w-[150px] p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
                   border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
                   focus:shadow-lg focus:outline-none transition-all duration-200">
     <input type="text" placeholder="Email Subject" required
-           class="w-full md:w-1/2 p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
+           class="flex-1 min-w-[150px] p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
                   border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
                   focus:shadow-lg focus:outline-none transition-all duration-200">
   </div>
 
+  <!-- Row 3 (Message) -->
   <textarea rows="7" placeholder="Your Message" required
-            class="w-full md:w-full p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
+            class="w-full p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
                    border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
                    focus:shadow-lg focus:outline-none resize-none transition-all duration-200"></textarea>
 
+  <!-- Submit -->
   <div class="flex justify-center">
     <button type="submit" 
             class="relative inline-block px-4 py-2 mt-7 rounded-full font-semibold text-white 
@@ -206,7 +210,6 @@ input[type=number] {
     </button>
   </div>
 </form>
-
 
 
 
