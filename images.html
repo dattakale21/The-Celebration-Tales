@@ -320,12 +320,7 @@ btn.addEventListener("click", () => {
 
     
       <div id="categoryGallery" class="hidden">
-        <!-- <button
-          id="backBtn"
-          class="mb-6 bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-600"
-        >
-          &larr; Back
-        </button> -->
+      
         <h2 id="galleryTitle" class="text-3xl text-center font-bold mb-16"></h2>
         <div
           id="galleryImages"
@@ -335,22 +330,23 @@ btn.addEventListener("click", () => {
     </section>
 
     <!-- Modal -->
-    <div
-      id="modal"
-      class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50"
-    >
-      <span
-        id="closeModal"
-        class="absolute top-4 right-6 text-white text-3xl cursor-pointer"
-        >&times;</span
-      >
-     <img
-          src="images/line.png"
-          alt="line"
-          class="mx-auto mb-2 mt-16 h-5"
-          style="width: 60rem"
-        />
-    </div>
+<div
+  id="modal"
+  class="fixed inset-0 bg-black bg-opacity-80 hidden z-50 flex items-center justify-center p-4"
+>
+  <span
+    id="closeModal"
+    class="absolute top-4 right-6 text-white text-3xl cursor-pointer z-50"
+    >&times;</span
+  >
+  <img
+    id="modalImage"
+    src=""
+    class="max-h-[90%] max-w-[90%] rounded-lg shadow-lg mx-auto my-auto"
+    alt="Full view"
+  />
+</div>
+
 
     <!-- Footer -->
     <footer class="bg-[#f8f4ed] text-black py-6">
@@ -377,13 +373,13 @@ btn.addEventListener("click", () => {
           >
             <i class="fab fa-facebook text-2xl"></i>
           </a>
-          <a
-            href="https://wa.me/91XXXXXXXXXX"
-            target="_blank"
-            class="text-black hover:text-green-500 transition"
-          >
-            <i class="fab fa-whatsapp text-2xl"></i>
-          </a>
+         <a
+  href="https://wa.me/918767062808"
+  target="_blank"
+  class="text-black hover:text-green-500 transition"
+>
+  <i class="fab fa-whatsapp text-2xl"></i>
+</a>
         </div>
         <!-- Copyright -->
         <p class="text-sm text-center text-black tracking-widest">
@@ -393,7 +389,7 @@ btn.addEventListener("click", () => {
     </footer>
 
   <script>
-  // Wait until DOM is loaded
+ 
   document.addEventListener("DOMContentLoaded", () => {
     const categoryCards = document.querySelectorAll(".category-card");
     const categoryGallery = document.getElementById("categoryGallery");
@@ -409,7 +405,7 @@ btn.addEventListener("click", () => {
       babyshower: ["images/babyshower/1.jpg","images/babyshower/2.jpg","images/babyshower/3.jpg","images/babyshower/4.jpg","images/babyshower/5.jpg","images/babyshower/6.jpg","images/babyshower/7.jpg","images/babyshower/8.jpg","images/babyshower/9.jpg"],
       anniversary: ["images/anniversary/1.jpg","images/anniversary/2.jpg","images/anniversary/3.jpg","images/anniversary/4.jpg","images/anniversary/5.jpg","images/anniversary/6.jpg","images/anniversary/7.jpg","images/anniversary/8.jpg","images/anniversary/9.jpg"],
       festival: ["images/festival/1.jpg","images/festival/2.jpg","images/festival/3.jpg","images/festival/4.jpg","images/festival/5.jpg","images/festival/6.jpg","images/festival/7.jpg","images/festival/8.jpg","images/festival/9.jpg"],
-      banner: ["images/banner/1.jpg","images/babyshower2.jpg","images/babyshower3.jpg","images/babyshower4.jpg","images/babyshower5.jpg","images/babyshower6.jpg","images/babyshower7.jpg","images/babyshower8.jpg","images/babyshower9.jpg"],
+      banner: ["images/banner/1.jpg","images/banner/2.jpg","images/babyshower3.jpg","images/babyshower4.jpg","images/babyshower5.jpg","images/babyshower6.jpg","images/babyshower7.jpg","images/babyshower8.jpg","images/babyshower9.jpg"],
       school: ["images/school/1.jpg","images/school/2.jpg","images/school/3.jpg","images/school/4.jpg","images/school/5.jpg","images/school/6.jpg","images/school/7.jpg","images/school/8.jpg","images/school/9.jpg"],
       "photo-shoot": ["images/photoshoot/1.jpg","images/photoshoot/9.jpg","images/photoshoot/3.jpg","images/photoshoot/4.jpg","images/photoshoot/2.jpg","images/photoshoot/6.jpg","images/photoshoot/7.jpg","images/photoshoot/8.jpg","images/photoshoot/5.jpg"]
     };
@@ -501,20 +497,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const galleryImages = document.getElementById("galleryImages");
   const filterButtons = Array.from(document.querySelectorAll(".filter-btn"));
 
-  // Demo images per category (your existing object)
-  const imagesData = {
-    birthday: ["images/birthday/5.jpg","images/birthday/2.jpg","images/birthday/3.jpg","images/birthday/1.jpg","images/birthday/4.jpg","images/birthday/6.jpg","images/birthday/7.jpg","images/birthday/8.jpg","images/birthday/9.jpg"],
-    wedding: ["images/Wedding/1.jpg","images/Wedding/2.jpg","images/Wedding/3.jpg","images/Wedding/4.jpg","images/Wedding/5.jpg","images/Wedding/6.jpg","images/Wedding/7.jpg","images/Wedding/8.jpg","images/Wedding/9.jpg"],
-    babyshower: ["images/babyshower/1.jpg","images/babyshower/2.jpg","images/babyshower/3.jpg","images/babyshower/4.jpg","images/babyshower/5.jpg","images/babyshower/6.jpg","images/babyshower/7.jpg","images/babyshower/8.jpg","images/babyshower/9.jpg"],
-    anniversary: ["images/anniversary/1.jpg","images/anniversary/2.jpg","images/anniversary/3.jpg","images/anniversary/4.jpg","images/anniversary/5.jpg","images/anniversary/6.jpg","images/anniversary/7.jpg","images/anniversary/8.jpg","images/anniversary/9.jpg"],
-    festival: ["images/festival/1.jpg","images/festival/2.jpg","images/festival/3.jpg","images/festival/4.jpg","images/festival/5.jpg","images/festival/6.jpg","images/festival/7.jpg","images/festival/8.jpg","images/festival/9.jpg"],
-    banner: ["images/banner/1.jpg","images/babyshower2.jpg","images/babyshower3.jpg","images/babyshower4.jpg","images/babyshower5.jpg","images/babyshower6.jpg","images/babyshower7.jpg","images/babyshower8.jpg","images/babyshower9.jpg"],
-    school: ["images/school/1.jpg","images/school/2.jpg","images/school/3.jpg","images/school/4.jpg","images/school/5.jpg","images/school/6.jpg","images/school/7.jpg","images/school/8.jpg","images/school/9.jpg"],
-    "photo-shoot": ["images/photoshoot/1.jpg","images/photoshoot/9.jpg","images/photoshoot/3.jpg","images/photoshoot/4.jpg","images/photoshoot/2.jpg","images/photoshoot/6.jpg","images/photoshoot/7.jpg","images/photoshoot/8.jpg","images/photoshoot/5.jpg"]
-  };
-
-  // Debug: confirm elements found
-  // console.log({ filterButtons: filterButtons.length, categoryCards: categoryCards.length });
 
   function clearActiveButtons() {
     filterButtons.forEach(b => {
@@ -621,6 +603,38 @@ document.addEventListener("DOMContentLoaded", () => {
     setActiveButton("all");
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const modal = document.getElementById("modal");
+  const modalImage = document.getElementById("modalImage");
+  const closeModal = document.getElementById("closeModal");
+
+  // Function to open modal
+  function openModal(src) {
+    modalImage.src = src;
+    modal.classList.remove("hidden");
+  }
+
+  // Close modal
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+
+  // Close modal if click outside the image
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+    }
+  });
+
+  // Attach click events to all current and future gallery images
+  document.body.addEventListener("click", (e) => {
+    if (e.target.closest(".gallery-item img")) {
+      openModal(e.target.src);
+    }
+  });
+});
+
 </script>
 
   </body>
