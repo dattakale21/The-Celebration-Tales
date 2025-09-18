@@ -6,6 +6,27 @@
   <title>The Celebration Tales - Contact</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+<link rel="shortcut icon" href="favicon_io/favicon.ico" type="image/x-icon">
+<meta name="description" content="Get in touch with The Celebration Tales for weddings, birthdays, anniversaries, corporate events, live streaming, and photography services.">
+<meta name="keywords" content="contact The Celebration Tales, book wedding photography, book event videography, contact for event coverage, wedding inquiries, photography bookings, videography bookings, book pre-wedding shoots, book candid photography, event inquiries, contact for live streaming, contact for reels creation, hire wedding cinematographers, hire event photographers, contact photo editors, contact video editors">
+<meta name="author" content="The Celebration Tales">
+<meta name="robots" content="index, follow">
+<!-- Open Graph -->
+<meta property="og:title" content="Contact Us | The Celebration Tales">
+<meta property="og:description" content="Reach out to The Celebration Tales for bookings and inquiries.">
+<meta property="og:image" content="https://dattakale21.github.io/The-Celebration-Tales/images/logo2.png">
+<meta property="og:url" content="https://dattakale21.github.io/The-Celebration-Tales/contact.html">
+<meta property="og:type" content="website">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contact Us | The Celebration Tales">
+<meta name="twitter:description" content="Reach out to The Celebration Tales for bookings and inquiries.">
+<meta name="twitter:image" content="https://dattakale21.github.io/The-Celebration-Tales/images/logo2.png">
  <style>
 
  /* Remove arrows in Chrome, Safari, Edge, Opera */
@@ -98,9 +119,9 @@ btn.addEventListener("click", () => {
     <!-- Contact Section -->
    <section id="contact" class="bg-[#f8f4ed] py-16 text-black">
   <!-- Heading -->
- <h2 class="text-2xl md:text-3xl text-center lg:text-4xl font-serif font-extrabold mb-4 -mt-10  tracking-tight">
+ <h1 class="text-2xl md:text-3xl text-center lg:text-4xl font-serif font-extrabold mb-4 -mt-10  tracking-tight">
   CONTACT <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-blue-500">US</span>
-</h2>
+</h1>
   <!-- Line -->
     <img
         src="images/dash_line.png"
@@ -186,11 +207,11 @@ btn.addEventListener("click", () => {
 <form id="myForm" class="space-y-4 w-[90%] max-w-6xl mx-auto px-4">
   <!-- Row 1 -->
   <div class="flex flex-wrap gap-3 justify-center">
-    <input type="text" placeholder="Full Name" required
+    <input type="text" name="Name" placeholder="Full Name" required
            class="flex-1 min-w-[150px] p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
                   border-2 border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-100 
                   focus:shadow-lg focus:outline-none transition-all duration-200">
-    <input type="email" placeholder="Email Address" required
+    <input type="Email" placeholder="Email Address" required
            class="flex-1 min-w-[150px] p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
                   border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
                   focus:shadow-lg focus:outline-none transition-all duration-200">
@@ -198,18 +219,18 @@ btn.addEventListener("click", () => {
 
   <!-- Row 2 -->
   <div class="flex flex-wrap gap-3 justify-center">
-    <input type="number" placeholder="Mobile Number" required
+    <input type="number" name="Mobile number" placeholder="Mobile Number" required
            class="flex-1 min-w-[150px] p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
                   border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
                   focus:shadow-lg focus:outline-none transition-all duration-200">
-    <input type="text" placeholder="Email Subject" required
+    <input type="text" name="Email subject" placeholder="Email Subject" required
            class="flex-1 min-w-[150px] p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
                   border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
                   focus:shadow-lg focus:outline-none transition-all duration-200">
   </div>
 
   <!-- Row 3 (Message) -->
-  <textarea rows="7" placeholder="Your Message" required
+  <textarea rows="7" name="Message" placeholder="Your Message" required
             class="w-full p-2 rounded-lg bg-white placeholder-gray-400 text-gray-700 
                    border-2 border-gray-300 focus:border-cyan-600 focus:ring-2 focus:ring-cyan-100 
                    focus:shadow-lg focus:outline-none resize-none transition-all duration-200"></textarea>
@@ -329,7 +350,7 @@ btn.addEventListener("click", () => {
         e.preventDefault();
 
         $.ajax({
-          url: "https://formspree.io/f/mbjndddg",
+          url: "https://formspree.io/f/xyzdrgwk",
           method: "POST",
           data: $(this).serialize(),
           dataType: "json",

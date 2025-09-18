@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dattakale21.github.io/The-Celebration-Tales/sitemap.xml
